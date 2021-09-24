@@ -1,0 +1,13 @@
+FUNCTION_BLOCK steinhart
+
+(*Divide: Log(r)/Log(2.718281828459)*)
+
+mA := 0.001125308852122;
+mB := 0.000234711863267;
+mC := 0.000000085663516;
+
+mRln := log(rR) / log(2.718281828459);
+
+rKelvin := 1.0 /(mA+(mB*mRln)+ (mC * (mRln)* (mRln)* (mRln)));
+
+END_FUNCTION_BLOCK

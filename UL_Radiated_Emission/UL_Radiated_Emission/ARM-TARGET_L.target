@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Target Name="ARM-TARGET_L" CodeType="" Model="1" ByteOrder="0" AlignNumber="4" MaxBlockSize="0" UINT16Size="2" UINT32Size="4" UCHARSize="1" PointerSize="4" FirstVa="1024" Quantum="1" EolChar="10" OKReal="true" OKString="true" SM="60000" T1="0" T2="0" T3="0" T4="0" T5="0" G1="0" G2="0" G3="0" G4="0" UserData="true" SingleTextLine="Linux Target" Help="" Keyword="" SysVarCycleDate="264" SysVarCycycTime="268" SysVarCyCurrent="272" SysVarCyMaximum="276" SysVarCyOverFlow="280" SysVarScanCnt="284" SysVarCycleCnt="288" SysVarResMode="292" SysVarCCExec="293" SysVarKVBPerr="294" SysVarKVBCErr="295" SysVarWNGNum="296" SysVarWNGarg="300" SysVarResName="4" StrictAlignt="true" MaxParam="128" SysVarWNGCMD="315" SysVarWNGCMPTNM="304" IsIsagraf3="false" Features="ResNbr=255" IsEnhancedTarget="false" MaxPouSize="65535">
+  <TargetDescription></TargetDescription>
+  <CodeTypes>
+    <CodeType Code="TicCode" />
+    <CodeType Code="StructuredCSourceCode" />
+  </CodeTypes>
+  <Networks>
+    <Network Name="ISARSI" />
+    <Network Name="HSD" />
+    <Network Name="ETCP" />
+  </Networks>
+  <CustomFields />
+  <ExtendedParameters>
+    <Parameter Name="tdb_Version" Number="1" Format="String" Default="TDB-2017011600" Access="UserDefined" SingleTextLine="" />
+  </ExtendedParameters>
+  <Features>
+    <Feature Name="PASSWORD" IsSupported="true" />
+    <Feature Name="OPTCODE" IsSupported="true" />
+    <Feature Name="BINDING" IsSupported="true" />
+    <Feature Name="MULTIRESOURCES" IsSupported="true" />
+    <Feature Name="ONLINE" IsSupported="true" />
+    <Feature Name="RETAIN" IsSupported="true" />
+    <Feature Name="MICROCYCTIME" IsSupported="false" />
+    <Feature Name="INTRPT" IsSupported="false" />
+    <Feature Name="ARINPRF" IsSupported="false" />
+    <Feature Name="BIGPOUS" IsSupported="false" />
+    <Feature Name="NETWORKINST" IsSupported="false" />
+    <Feature Name="SFCPRIO" IsSupported="false" />
+    <Feature Name="COMPLEXSUBVARCONNECTEDTOIOCHAN" IsSupported="false" />
+    <Feature Name="IOCHANOEMPARAM" IsSupported="false" />
+    <Feature Name="OLCCFBINITEXIT" IsSupported="false" />
+    <Feature Name="ANYBITACCESSOFFSET" IsSupported="false" />
+    <Feature Name="POUNUMBERINGPERSISTENCE" IsSupported="false" />
+    <Feature Name="INDIRECTBITADDRESSING" IsSupported="false" />
+  </Features>
+  <Languages>
+    <Language Name="ST" IsSupported="true" />
+    <Language Name="IL" IsSupported="true" />
+    <Language Name="LD" IsSupported="true" />
+    <Language Name="FBD" IsSupported="true" />
+    <Language Name="SAMA" IsSupported="true" />
+    <Language Name="61499" IsSupported="true" />
+    <Language Name="SFC" IsSupported="true" />
+    <Language Name="FC" IsSupported="true" />
+    <Language Name="C" IsSupported="true" />
+  </Languages>
+  <DataTypes>
+    <DataType Name="BOOL" IsSupported="true" />
+    <DataType Name="SINT" IsSupported="true" />
+    <DataType Name="DINT" IsSupported="true" />
+    <DataType Name="REAL" IsSupported="true" />
+    <DataType Name="TIME" IsSupported="true" />
+    <DataType Name="STRING" IsSupported="true" />
+    <DataType Name="LREAL" IsSupported="true" />
+    <DataType Name="INT" IsSupported="true" />
+    <DataType Name="LINT" IsSupported="true" />
+    <DataType Name="USINT" IsSupported="true" />
+    <DataType Name="UINT" IsSupported="true" />
+    <DataType Name="UDINT" IsSupported="true" />
+    <DataType Name="ULINT" IsSupported="true" />
+    <DataType Name="DATE" IsSupported="true" />
+    <DataType Name="BYTE" IsSupported="true" />
+    <DataType Name="WORD" IsSupported="true" />
+    <DataType Name="DWORD" IsSupported="true" />
+    <DataType Name="LWORD" IsSupported="true" />
+    <DataType Name="SAFEBOOL" IsSupported="false" />
+    <DataType Name="ANY_ELEMENTARY" IsSupported="false" />
+    <DataType Name="__ANY" IsSupported="false" />
+  </DataTypes>
+  <SystemVariables />
+  <Interrupts />
+  <StdPous>
+    <StdPou Name="SR" IsSupported="true" />
+    <StdPou Name="RS" IsSupported="true" />
+    <StdPou Name="R_TRIG" IsSupported="true" />
+    <StdPou Name="F_TRIG" IsSupported="true" />
+    <StdPou Name="CTU" IsSupported="true" />
+    <StdPou Name="CTD" IsSupported="true" />
+    <StdPou Name="CTUD" IsSupported="true" />
+    <StdPou Name="TON" IsSupported="true" />
+    <StdPou Name="TOF" IsSupported="true" />
+    <StdPou Name="CMP" IsSupported="true" />
+    <StdPou Name="STACKINT" IsSupported="true" />
+    <StdPou Name="AVERAGE" IsSupported="true" />
+    <StdPou Name="HYSTER" IsSupported="true" />
+    <StdPou Name="LIM_ALRM" IsSupported="true" />
+    <StdPou Name="INTEGRAL" IsSupported="true" />
+    <StdPou Name="DERIVATE" IsSupported="true" />
+    <StdPou Name="BLINK" IsSupported="true" />
+    <StdPou Name="SIG_GEN" IsSupported="true" />
+    <StdPou Name="ABS" IsSupported="true" />
+    <StdPou Name="EXPT" IsSupported="true" />
+    <StdPou Name="LOG" IsSupported="true" />
+    <StdPou Name="POW" IsSupported="true" />
+    <StdPou Name="SQRT" IsSupported="true" />
+    <StdPou Name="TRUNC" IsSupported="true" />
+    <StdPou Name="ACOS" IsSupported="true" />
+    <StdPou Name="ASIN" IsSupported="true" />
+    <StdPou Name="ATAN" IsSupported="true" />
+    <StdPou Name="COS" IsSupported="true" />
+    <StdPou Name="SIN" IsSupported="true" />
+    <StdPou Name="TAN" IsSupported="true" />
+    <StdPou Name="ROL" IsSupported="true" />
+    <StdPou Name="ROR" IsSupported="true" />
+    <StdPou Name="SHL" IsSupported="true" />
+    <StdPou Name="SHR" IsSupported="true" />
+    <StdPou Name="MIN" IsSupported="true" />
+    <StdPou Name="MAX" IsSupported="true" />
+    <StdPou Name="LIMIT" IsSupported="true" />
+    <StdPou Name="MOD" IsSupported="true" />
+    <StdPou Name="MUX4" IsSupported="true" />
+    <StdPou Name="MUX8" IsSupported="true" />
+    <StdPou Name="ODD" IsSupported="true" />
+    <StdPou Name="RAND" IsSupported="true" />
+    <StdPou Name="SEL" IsSupported="true" />
+    <StdPou Name="ASCII" IsSupported="true" />
+    <StdPou Name="CHAR" IsSupported="true" />
+    <StdPou Name="DELETE" IsSupported="true" />
+    <StdPou Name="FIND" IsSupported="true" />
+    <StdPou Name="INSERT" IsSupported="true" />
+    <StdPou Name="LEFT" IsSupported="true" />
+    <StdPou Name="MID" IsSupported="true" />
+    <StdPou Name="MLEN" IsSupported="true" />
+    <StdPou Name="REPLACE" IsSupported="true" />
+    <StdPou Name="RIGHT" IsSupported="true" />
+    <StdPou Name="AND_MASK" IsSupported="true" />
+    <StdPou Name="OR_MASK" IsSupported="true" />
+    <StdPou Name="XOR_MASK" IsSupported="true" />
+    <StdPou Name="NOT_MASK" IsSupported="true" />
+    <StdPou Name="TP" IsSupported="true" />
+    <StdPou Name="CONNECT" IsSupported="true" />
+    <StdPou Name="USEND_S" IsSupported="true" />
+    <StdPou Name="URCV_S" IsSupported="true" />
+    <StdPou Name="SUB_DATE_DATE" IsSupported="true" />
+    <StdPou Name="CURRENT_ISA_DATE" IsSupported="true" />
+    <StdPou Name="SEMA" IsSupported="true" />
+    <StdPou Name="LOCK_CPU" IsSupported="false" />
+    <StdPou Name="UNLOCK_CPU" IsSupported="false" />
+  </StdPous>
+  <Pous>
+    <Pou FileVersion="200.00.003" Name="ANALOGINPUT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="ANALOGINPUT" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="AI_Type" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_Gain" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="GAIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_Offset" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="OFFS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_Inf" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INF" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_Sup" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="SUP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_InputPhis" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="PHIS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="AI_InputConf" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="INCO" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="AI_InputLogical" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="INLO" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="AI_InputStatus" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="INST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="CntErrori" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="OldValore" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="CALC_CRC" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="CALC_CRC" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Buffer" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="BUFF" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="255" />
+        </Variable>
+        <Variable Name="Start" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="STRT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Length" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Mode" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="MODE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CRC1" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="CRC1" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="CRC2" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="CRC2" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="CLOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DATALOG" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="CLOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILENAME" DataType="STRING" InitialValue="" Comment="FILENAME" Address="" Modifier="Constant" Kind="VarInput" Alias="FNAM" AccessRights="ReadWrite" StringSize="20" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILESIZE" DataType="DINT" InitialValue="" Comment="FILESIZE" Address="" Modifier="Constant" Kind="VarInput" Alias="FSIZ" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="STRING" InitialValue="" Comment="DATA" Address="" Modifier="Constant" Kind="VarInput" Alias="DATA" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LOGTIME" DataType="DINT" InitialValue="" Comment="LOGTIME" Address="" Modifier="Constant" Kind="VarInput" Alias="LTIM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RESET" DataType="BOOL" InitialValue="" Comment="RESET" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MEMORY" DataType="BOOL" InitialValue="" Comment="MEMORY" Address="" Modifier="Constant" Kind="VarInput" Alias="MEM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TIME" DataType="BOOL" InitialValue="" Comment="TIME" Address="" Modifier="Constant" Kind="VarInput" Alias="TIME" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DESCRIPTION" DataType="STRING" InitialValue="" Comment="DESCRIPTION" Address="" Modifier="Constant" Kind="VarInput" Alias="DESC" AccessRights="ReadWrite" StringSize="200" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MEMBUFNMSG" DataType="DINT" InitialValue="" Comment="MBNM" Address="" Modifier="Constant" Kind="VarInput" Alias="MBNM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NUKE" DataType="BOOL" InitialValue="" Comment="NUKE" Address="" Modifier="Constant" Kind="VarInput" Alias="NUKE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="CODE" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="DINT" InitialValue="" Comment="MSG" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ENABLEL" DataType="BOOL" InitialValue="" Comment="ENABLEL" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="FILENAMEL" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="20" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="RESETL" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COM" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COM" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="TX_ENABLE" DataType="BOOL" InitialValue="" Comment="TX_ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="TXEN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PORT" DataType="STRING" InitialValue="" Comment="PORT" Address="" Modifier="Constant" Kind="VarInput" Alias="PORT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PARAMETERS" DataType="STRING" InitialValue="" Comment="PARAMETERS" Address="" Modifier="Constant" Kind="VarInput" Alias="PARS" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TX_BUFFER" DataType="BYTE" InitialValue="" Comment="TX_BUFFER" Address="" Modifier="Constant" Kind="VarInput" Alias="TXB" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="255" />
+        </Variable>
+        <Variable Name="TX_N" DataType="DINT" InitialValue="" Comment="TX_N" Address="" Modifier="Constant" Kind="VarInput" Alias="TXN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="COM_ENABLE" DataType="BOOL" InitialValue="" Comment="COM_ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RX_CLEAR" DataType="DINT" InitialValue="" Comment="RX_CLEAR" Address="" Modifier="Constant" Kind="VarInput" Alias="RXCL" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="EXT_STATUS" DataType="DINT" InitialValue="" Comment="EXT_STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="EXST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="RX_BUFFER" DataType="BYTE" InitialValue="" Comment="RX_BUFFER" Address="" Modifier="Constant" Kind="VarOutput" Alias="RXB" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="255" />
+        </Variable>
+        <Variable Name="RX_N" DataType="DINT" InitialValue="" Comment="RX_N" Address="" Modifier="Constant" Kind="VarOutput" Alias="RXN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_RX_SEC" DataType="DWORD" InitialValue="" Comment="LAST_RX_SEC" Address="" Modifier="Constant" Kind="VarOutput" Alias="LRXs" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_RX_USEC" DataType="DWORD" InitialValue="" Comment="LAST_RX_USEC" Address="" Modifier="Constant" Kind="VarOutput" Alias="LRXU" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DWORD" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COMSR" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COMSR" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CONF" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CONF" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PORT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="PORT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TIMEOUT" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TOUT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INTERFRAME" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INFR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CMD" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CMD" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="STX" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="STX" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="MODE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="MODE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="POLLING_RATE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="PORA" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="OUTPUT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OUT" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="TIME" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="TIM" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="PRIV" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COMSR_DEC" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COMSR_DEC" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Input" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="IN" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CommType" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="COMM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Adr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OADR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Command" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OCMD" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Register" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OREG" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Value" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OVAL" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="125" />
+        </Variable>
+        <Variable Name="Out_Identifier" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OID" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Instance" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OIST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="StringStatus" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="SSTT" AccessRights="ReadWrite" StringSize="20" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COMSR_ENC" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COMSR_ENC" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CommType" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="COMM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Address" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Command" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CMD" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Register" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="REG" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Number" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NREG" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Values" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="VALS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="125" />
+        </Variable>
+        <Variable Name="Identifier" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Instance" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Output" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OUT" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Length" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="FirstChar" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STX" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COMSR_MDEC" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COMSR_MDEC" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Input" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="IN" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="CommType" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="COMM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Out_Adr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OADR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Out_Command" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OCMD" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Out_Register" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OREG" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Out_Value" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OVAL" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+          <Dimension Lower="1" Upper="125" />
+        </Variable>
+        <Variable Name="Out_Identifier" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OID" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Out_Instance" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OIST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="StringStatus" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="SSTT" AccessRights="ReadWrite" StringSize="20" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Position" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="POS" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="COMSR_MENC" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="COMSR_MENC" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CommType" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="COMM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Address" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Command" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CMD" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Register" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="REG" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Number" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NREG" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Values" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="VALS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+          <Dimension Lower="1" Upper="125" />
+        </Variable>
+        <Variable Name="Identifier" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Instance" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Output" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OUT" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Length" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="FirstChar" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STX" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="50" />
+        </Variable>
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Position" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="POS" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Recalc" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="REC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Prev_En" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="CREATE_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="CREATE_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NAME" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SELECT" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="SEL" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_EN" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="DATA_LOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="DATA_LOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="Data logger enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="F_NAME" DataType="STRING" InitialValue="" Comment="File name" Address="" Modifier="Constant" Kind="VarInput" Alias="FN" AccessRights="ReadWrite" StringSize="128" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="F_SIZE" DataType="DINT" InitialValue="" Comment="File size in Kbyte" Address="" Modifier="Constant" Kind="VarInput" Alias="FS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="STRING" InitialValue="" Comment="Data to write" Address="" Modifier="Constant" Kind="VarInput" Alias="DT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LOG_TIME" DataType="TIME" InitialValue="" Comment="log time" Address="" Modifier="Constant" Kind="VarInput" Alias="LT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RESET" DataType="BOOL" InitialValue="" Comment="Reset logger" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="BOOL" InitialValue="" Comment="status" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NUM_REC" DataType="DINT" InitialValue="" Comment="number of record writte" Address="" Modifier="Constant" Kind="VarOutput" Alias="NR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SF_NAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="128" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="SF_SIZE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="SENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="SRESET" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="SQ" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="POS_FFS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="POS_RAM" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="TNEXT_W" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="SNUM_REC" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="DEL_VALUE_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="DEL_VALUE_MAP" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME_VAR" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NVAR" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="POS_VAR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="POS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="DIXEXML_GET_INOUT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="DIXEXML_GET_INOUT" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="in_en" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="inen" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="in_off" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ioff" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="out_en" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ouen" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="out_off" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="in_fetch" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="infe" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="out_fetch" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="oufe" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="in_data" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="inda" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="out_data" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ouda" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="in_epoch" DataType="DWORD" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="inep" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="out_epoch" DataType="DWORD" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ouep" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_in_en" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="lien" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_out_en" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="loen" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_in_fetch" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="life" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_out_fetch" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="lofe" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="DNOW" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_RTC" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="DNOW" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SEC" DataType="DWORD" InitialValue="" Comment="Number of second since 1970/01/01" Address="" Modifier="Constant" Kind="VarOutput" Alias="SEC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NSEC" DataType="DWORD" InitialValue="" Comment="Number of nano second in current second" Address="" Modifier="Constant" Kind="VarOutput" Alias="NSEC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="ERASER" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="ERASER" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILENAME" DataType="STRING" InitialValue="" Comment="FILENAME" Address="" Modifier="Constant" Kind="VarInput" Alias="FNAM" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="L_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="FILE_COUNTER" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="FILE_COUNTER" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Index" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Type" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Count" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="CNT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Name" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="NAME" AccessRights="ReadWrite" StringSize="60" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Prev_Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="Private" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GETVARBYNAME" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="Retrieve value, variable address and user address from the local symbol table&#xD;&#xA;" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GETVARBYNAME" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="VAR_NAME" DataType="STRING" InitialValue="" Comment="Name of the variable" Address="" Modifier="Constant" Kind="VarInput" Alias="NAME" AccessRights="ReadWrite" StringSize="50" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INDEX" DataType="DINT" InitialValue="" Comment="Array index" Address="" Modifier="Constant" Kind="VarInput" Alias="IDX" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FORMAT" DataType="DINT" InitialValue="" Comment="String format" Address="" Modifier="Constant" Kind="VarInput" Alias="FMT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="Variable value" Address="" Modifier="Constant" Kind="VarOutput" Alias="VAL" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="Status" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SYM_TBL_ID" DataType="USINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="16" />
+        </Variable>
+        <Variable Name="SYM_TBL_PTR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_FILE_EPOCH" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_FILE_EPOCH" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="FILENAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="FNAM" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EPOCH" DataType="DWORD" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="EP" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_LOCALTIME" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_RTC" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_LOCALTIME" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="DINT" InitialValue="" Comment="Q" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="YEAR" DataType="DINT" InitialValue="" Comment="YEAR" Address="" Modifier="Constant" Kind="VarOutput" Alias="YEAR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MONTH" DataType="DINT" InitialValue="" Comment="MONTH" Address="" Modifier="Constant" Kind="VarOutput" Alias="MTH" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DAY" DataType="DINT" InitialValue="" Comment="DAY" Address="" Modifier="Constant" Kind="VarOutput" Alias="DAY" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="HOUR" DataType="DINT" InitialValue="" Comment="HOUR" Address="" Modifier="Constant" Kind="VarOutput" Alias="HOUR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MINUTE" DataType="DINT" InitialValue="" Comment="MINUTE" Address="" Modifier="Constant" Kind="VarOutput" Alias="MIN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SECOND" DataType="DINT" InitialValue="" Comment="SECOND" Address="" Modifier="Constant" Kind="VarOutput" Alias="SEC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DAYWEEK" DataType="DINT" InitialValue="" Comment="DAYWEEK" Address="" Modifier="Constant" Kind="VarOutput" Alias="DYW" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="IS_DST" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ISDS" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="TZ_OFF" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="TZOF" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="TZ_NAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="TZNA" AccessRights="ReadWrite" StringSize="50" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME" DataType="STRING" InitialValue="" Comment="NAME" Address="" Modifier="Constant" Kind="VarOutput" Alias="NAME" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_TIME" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_RTC" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_TIME" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="DINT" InitialValue="" Comment="Q" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="YEAR" DataType="DINT" InitialValue="" Comment="YEAR" Address="" Modifier="Constant" Kind="VarOutput" Alias="YEAR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MONTH" DataType="DINT" InitialValue="" Comment="MONTH" Address="" Modifier="Constant" Kind="VarOutput" Alias="MTH" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DAY" DataType="DINT" InitialValue="" Comment="DAY" Address="" Modifier="Constant" Kind="VarOutput" Alias="DAY" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="HOUR" DataType="DINT" InitialValue="" Comment="HOUR" Address="" Modifier="Constant" Kind="VarOutput" Alias="HOUR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MINUTE" DataType="DINT" InitialValue="" Comment="MINUTE" Address="" Modifier="Constant" Kind="VarOutput" Alias="MIN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SECOND" DataType="DINT" InitialValue="" Comment="SECOND" Address="" Modifier="Constant" Kind="VarOutput" Alias="SEC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DAYWEEK" DataType="DINT" InitialValue="" Comment="DAYWEEK" Address="" Modifier="Constant" Kind="VarOutput" Alias="DYW" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_USB_STATUS" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DATALOG" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_USB_STATUS" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="P_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PEN" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_VALUE_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_VALUE_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME_VAR" DataType="STRING" InitialValue="" Comment="var name" Address="" Modifier="Constant" Kind="VarInput" Alias="NVAR" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="POS_VAR" DataType="DINT" InitialValue="" Comment="var pos" Address="" Modifier="Constant" Kind="VarInput" Alias="PVAR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="value" Address="" Modifier="Constant" Kind="VarOutput" Alias="VAL" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="INT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GET_VERSION" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GET_VERSION" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VERSION" DataType="STRING" InitialValue="" Comment="version" Address="" Modifier="Constant" Kind="VarOutput" Alias="VER" AccessRights="ReadWrite" StringSize="20" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="GPRS" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="GPRS" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ON" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ON" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="up" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="up" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="RSSI" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="RSSI" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NETSTAT" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="NEST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="GPRSSTAT" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="GPST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="OPERATOR" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OP" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DYNDNSSTAT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="DDST" AccessRights="ReadWrite" StringSize="20" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="IP" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="IP" AccessRights="ReadWrite" StringSize="20" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="HW_DETECT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="HW_DETECT" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="HWDT" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="HWDT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="IPRO_CONFIG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="IPRO_CONFIG" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ResourceID" DataType="DINT" InitialValue="" Comment="number of resource" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Value" DataType="STRING" InitialValue="" Comment="value of resource" Address="" Modifier="Constant" Kind="VarInput" Alias="VAL" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="status operation" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LEN" DataType="BOOL" InitialValue="" Comment="LEN" Address="" Modifier="Constant" Kind="Var" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="IPRO_GET_CONFIG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="IPRO_GET_CONFIG" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Enable" DataType="BOOL" InitialValue="" Comment="Enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ResourceID" DataType="DINT" InitialValue="" Comment="ResourceID" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="Status" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Value" DataType="STRING" InitialValue="" Comment="Value" Address="" Modifier="Constant" Kind="VarOutput" Alias="VAL" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LastEnable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="ENL" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="LIST_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="LIST_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MP1" DataType="STRING" InitialValue="" Comment="name of all configuration file" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP1" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP2" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP2" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP3" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP3" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP4" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP4" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP5" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP5" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP6" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP6" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP7" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP7" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP8" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP8" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP9" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP9" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MP10" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MP10" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="MAIL_SEND" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="MAIL_SEND" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PROFILE" DataType="STRING" InitialValue="" Comment="profile name" Address="" Modifier="Constant" Kind="VarInput" Alias="PROF" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TO" DataType="STRING" InitialValue="" Comment="email address" Address="" Modifier="Constant" Kind="VarInput" Alias="TO" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TEXT" DataType="STRING" InitialValue="" Comment="mail text" Address="" Modifier="Constant" Kind="VarInput" Alias="TEXT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="OBJECT" DataType="STRING" InitialValue="" Comment="mail object" Address="" Modifier="Constant" Kind="VarInput" Alias="OBJ" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TYPE" DataType="DINT" InitialValue="" Comment="type of attachement" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ATTACHEMENT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ATT" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="ticket" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="100" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="OCAN_RX" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="OCAN_RX" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="COMMIT" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CMIT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ADDR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADDR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LEN" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SELECTADDR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="SELA" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SELECTPACKET" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="SELP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="N" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="N" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DROPPED" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="DROP" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DLC" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="DLC" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="EFF" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="EFF" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="RTR" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="RTR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="DATA" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="7" />
+        </Variable>
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="OCAN_TX" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="OCAN_TX" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ADDR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADDR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DLC" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DLC" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RTR" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="RTR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EFF" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EFF" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DATA" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="7" />
+        </Variable>
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="OCAN_TX_BUF" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="OCAN_TX_BUF" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ADDR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADDR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DLC" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DLC" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RTR" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="RTR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EFF" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EFF" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FREQUENCY" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="FREQ" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DATA" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="0" Upper="7" />
+        </Variable>
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="PROFILE" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="PROFILE" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILE" DataType="STRING" InitialValue="" Comment="profile name" Address="" Modifier="Constant" Kind="VarInput" Alias="FILE" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FIELD" DataType="STRING" InitialValue="" Comment="field" Address="" Modifier="Constant" Kind="VarInput" Alias="FLD" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="VAL" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="READ_CLOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="READ_CLOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="LOGNAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="LNAM" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="START" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="STAR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NEXT" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NEXT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="OUT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OUT" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SIZE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="SIZE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="COPY_SEC" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="COSE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="IN_MEM" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="INME" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="TIME_STAMP" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="TIST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MAX" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MAX" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="DESC" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="DESC" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SEQ" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="SEQ" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="REBOOT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="REBOOT" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="RRLOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="RRLOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN_INIT" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ENIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INIT_NUM" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INNU" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INIT_SIZE" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INSI" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EN_LOG" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ENLO" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LOG_DATA" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="LODA" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EN_READ" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ENRE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="READ_INDEX" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="REIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INIT_NAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="INNA" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="OLDER" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="OLD" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NEXT" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="NEXT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NUM" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="NUM" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="SIZE" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="SIZE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="READ_DATA" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="REDA" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="READ_SEQ" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="RESE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="NEXT_SEQ" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="NESE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="UDINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SEND_ALERT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SEND_ALERT" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PROF" DataType="STRING" InitialValue="" Comment="profile" Address="" Modifier="Constant" Kind="VarInput" Alias="PROF" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TEXT" DataType="STRING" InitialValue="" Comment="message" Address="" Modifier="Constant" Kind="VarInput" Alias="TEXT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="identification" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="error message" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="execution step" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="ticket" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="100" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SEND_ATTACHEMENT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SEND_ATTACHEMENT" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PROF" DataType="STRING" InitialValue="" Comment="profile" Address="" Modifier="Constant" Kind="VarInput" Alias="PROF" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TEXT" DataType="STRING" InitialValue="" Comment="message" Address="" Modifier="Constant" Kind="VarInput" Alias="TEXT" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TYPE" DataType="DINT" InitialValue="" Comment="type of attachement" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME" DataType="STRING" InitialValue="" Comment="name of attachement" Address="" Modifier="Constant" Kind="VarInput" Alias="NAME" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="identification" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="error message" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="execution step" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="ticket" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="100" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SEND_COV" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SEND_COV" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SUB_PROCESSID" DataType="DINT" InitialValue="" Comment="Subscriber process identifier(set to 1, not actually used in this version)" Address="" Modifier="Constant" Kind="VarInput" Alias="SID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DEVICE_ID" DataType="DINT" InitialValue="" Comment="Initiating device identifer" Address="" Modifier="Constant" Kind="VarInput" Alias="DID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INST_TYPE" DataType="STRING" InitialValue="" Comment="Monitored object identifier type(AV, BV, MSV)" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="INST_ID" DataType="DINT" InitialValue="" Comment="Monitored object identifier instance" Address="" Modifier="Constant" Kind="VarInput" Alias="ID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TIME_REMAIN" DataType="DINT" InitialValue="" Comment="Time remaining" Address="" Modifier="Constant" Kind="VarInput" Alias="TIME" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PROPERTY_ID" DataType="DINT" InitialValue="" Comment="Property identifer" Address="" Modifier="Constant" Kind="VarInput" Alias="PID" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TAG" DataType="DINT" InitialValue="" Comment="TAG" Address="" Modifier="Constant" Kind="VarInput" Alias="TAG" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="VALUE" Address="" Modifier="Constant" Kind="VarInput" Alias="VAL" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SEND_FILE" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SEND_FILE" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="HOST" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="HOST" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PORT" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="PORT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TYPE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TYPE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="USER" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="USER" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PASS" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="PASS" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FTYP" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="FTYP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILE" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="FILE" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DEST" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DEST" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="STEP" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="STEP" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="LENB" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SEND_TRAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SEND_TRAP" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="OID" DataType="STRING" InitialValue="" Comment="OID" Address="" Modifier="Constant" Kind="VarInput" Alias="OID" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="VALUE" Address="" Modifier="Constant" Kind="VarInput" Alias="VAL" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TYPE" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TYP" AccessRights="ReadWrite" StringSize="1" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="GENERIC_TRAP" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="GTR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SPECIFIC_TRAP" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="STR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VERSION" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="VER" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DESTINATION" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="DST" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TRAPOID" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="TRO" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="MSG" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRI" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_BUZZER" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_BUZZER" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ON" DataType="BOOL" InitialValue="" Comment="on" Address="" Modifier="Constant" Kind="VarInput" Alias="on" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_DIAL_IN" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_DIAL_IN" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ON" DataType="BOOL" InitialValue="" Comment="on" Address="" Modifier="Constant" Kind="VarInput" Alias="on" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_LED" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_LED" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MANUAL" DataType="BOOL" InitialValue="" Comment="manual" Address="" Modifier="Constant" Kind="VarInput" Alias="MAN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RED" DataType="BOOL" InitialValue="" Comment="red" Address="" Modifier="Constant" Kind="VarInput" Alias="R" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="YELLOW" DataType="BOOL" InitialValue="" Comment="yellow" Address="" Modifier="Constant" Kind="VarInput" Alias="Y" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_LOCALTIME" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_RTC" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_LOCALTIME" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="YEAR" DataType="DINT" InitialValue="" Comment="YEAR" Address="" Modifier="Constant" Kind="VarInput" Alias="YEAR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MONTH" DataType="DINT" InitialValue="" Comment="MONTH" Address="" Modifier="Constant" Kind="VarInput" Alias="MTH" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DAY" DataType="DINT" InitialValue="" Comment="DAY" Address="" Modifier="Constant" Kind="VarInput" Alias="DAY" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="HOUR" DataType="DINT" InitialValue="" Comment="HOUR" Address="" Modifier="Constant" Kind="VarInput" Alias="HOUR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MINUTE" DataType="DINT" InitialValue="" Comment="MINUTE" Address="" Modifier="Constant" Kind="VarInput" Alias="MIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SECOND" DataType="DINT" InitialValue="" Comment="SECOND" Address="" Modifier="Constant" Kind="VarInput" Alias="SEC" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RESET" DataType="BOOL" InitialValue="" Comment="RESET" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="BOOL" InitialValue="" Comment="Q" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MAP_NAME" DataType="STRING" InitialValue="" Comment="Set current map" Address="" Modifier="Constant" Kind="VarInput" Alias="MAP" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="REBOOT" DataType="BOOL" InitialValue="" Comment="Reboot after new map uploaded" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="INT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_NETWORK" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_NETWORK" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN" DataType="BOOL" InitialValue="" Comment="EN" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MODE" DataType="DINT" InitialValue="" Comment="MODE" Address="" Modifier="Constant" Kind="VarInput" Alias="MODE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MAN" DataType="BOOL" InitialValue="" Comment="MAN" Address="" Modifier="Constant" Kind="VarInput" Alias="MAN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LEN" DataType="BOOL" InitialValue="" Comment="LEN" Address="" Modifier="Constant" Kind="Var" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_RESET" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_RESET" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="EN" DataType="BOOL" InitialValue="" Comment="EN" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="ACT" DataType="BOOL" InitialValue="" Comment="ACT" Address="" Modifier="Constant" Kind="VarInput" Alias="ACT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LEN" DataType="BOOL" InitialValue="" Comment="LEN" Address="" Modifier="Constant" Kind="Var" Alias="LEN" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SPIEXT" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SPIEXT" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="BUFFER" DataType="BYTE" InitialValue="" Comment="buffer" Address="" Modifier="Constant" Kind="VarInput" Alias="BUF" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="7" />
+        </Variable>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LocBUF" DataType="BYTE" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0">
+          <Dimension Lower="1" Upper="7" />
+        </Variable>
+        <Variable Name="LocEN" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="STRT_SNMP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="STRT_SNMP" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VERSION" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="VER" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="MSG" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="PRIV" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="PRI" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="TLOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="TLOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILENAME" DataType="STRING" InitialValue="" Comment="FILENAME" Address="" Modifier="Constant" Kind="VarInput" Alias="FNAM" AccessRights="ReadWrite" StringSize="60" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILESIZE" DataType="DINT" InitialValue="" Comment="FILESIZE" Address="" Modifier="Constant" Kind="VarInput" Alias="FSIZ" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DATA" DataType="STRING" InitialValue="" Comment="DATA" Address="" Modifier="Constant" Kind="VarInput" Alias="DATA" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LOGTIME" DataType="DINT" InitialValue="" Comment="LOGTIME" Address="" Modifier="Constant" Kind="VarInput" Alias="LTIM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RESET" DataType="BOOL" InitialValue="" Comment="RESET" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MEMORY" DataType="BOOL" InitialValue="" Comment="MEMORY" Address="" Modifier="Constant" Kind="VarInput" Alias="MEM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TIME" DataType="BOOL" InitialValue="" Comment="TIME" Address="" Modifier="Constant" Kind="VarInput" Alias="TIME" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DESCRIPTION" DataType="STRING" InitialValue="" Comment="DESCRIPTION" Address="" Modifier="Constant" Kind="VarInput" Alias="DESC" AccessRights="ReadWrite" StringSize="200" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MEMBUFNMSG" DataType="DINT" InitialValue="" Comment="MBNM" Address="" Modifier="Constant" Kind="VarInput" Alias="MBNM" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NUKE" DataType="BOOL" InitialValue="" Comment="NUKE" Address="" Modifier="Constant" Kind="VarInput" Alias="NUKE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="CODE" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="DINT" InitialValue="" Comment="MSG" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ENABLEL" DataType="BOOL" InitialValue="" Comment="ENABLEL" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="RESETL" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="UPDATE_VISOGRAPH" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="UPDATE_VISOGRAPH" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="Active update visograph" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="BIN_FILE" DataType="STRING" InitialValue="" Comment="bin file name" Address="" Modifier="Constant" Kind="VarInput" Alias="BIN" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="INT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="USB_DATALOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="***DEPRECATED***" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="USB_DATALOG" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="Active download to USB" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="LOGFILE" DataType="STRING" InitialValue="" Comment="Source File" Address="" Modifier="Constant" Kind="VarInput" Alias="LOG" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DESTFILE" DataType="STRING" InitialValue="" Comment="Destination File" Address="" Modifier="Constant" Kind="VarInput" Alias="DEST" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="INT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_OPERATION" DataType="INT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="LO" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="USB_PROTECTION" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DRIVER" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="USB_PROTECTION" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PERIOD" DataType="DINT" InitialValue="" Comment="PERIOD (minute)" Address="" Modifier="Constant" Kind="VarInput" Alias="PRD" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="EN_FOLDER" DataType="DINT" InitialValue="" Comment="EN_FOLDER" Address="" Modifier="Constant" Kind="VarInput" Alias="FOLD" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="BIOS" DataType="STRING" InitialValue="" Comment="BIOS" Address="" Modifier="Constant" Kind="VarInput" Alias="BIOS" AccessRights="ReadWrite" StringSize="200" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="APP" DataType="BOOL" InitialValue="" Comment="APP" Address="" Modifier="Constant" Kind="VarInput" Alias="APP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="BIN" DataType="BOOL" InitialValue="" Comment="BIN" Address="" Modifier="Constant" Kind="VarInput" Alias="BIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CONF" DataType="BOOL" InitialValue="" Comment="CONF" Address="" Modifier="Constant" Kind="VarInput" Alias="CON" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SPALT" DataType="BOOL" InitialValue="" Comment="SPALT" Address="" Modifier="Constant" Kind="VarInput" Alias="SPAL" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PARAM" DataType="BOOL" InitialValue="" Comment="PARAM" Address="" Modifier="Constant" Kind="VarInput" Alias="PARA" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="WWW" DataType="BOOL" InitialValue="" Comment="WWW" Address="" Modifier="Constant" Kind="VarInput" Alias="WWW" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="WEB" DataType="BOOL" InitialValue="" Comment="WEB" Address="" Modifier="Constant" Kind="VarInput" Alias="WEB" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="STATUS" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_PRD" DataType="DINT" InitialValue="" Comment="ST_PRD" Address="" Modifier="Constant" Kind="VarOutput" Alias="STPR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_FOLD" DataType="STRING" InitialValue="" Comment="ST_FOLD" Address="" Modifier="Constant" Kind="VarOutput" Alias="STFO" AccessRights="ReadWrite" StringSize="200" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_BIOS" DataType="STRING" InitialValue="" Comment="ST_BIOS" Address="" Modifier="Constant" Kind="VarOutput" Alias="STBS" AccessRights="ReadWrite" StringSize="200" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_APP" DataType="BOOL" InitialValue="" Comment="ST_APP" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAP" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_BIN" DataType="BOOL" InitialValue="" Comment="ST_BIN" Address="" Modifier="Constant" Kind="VarOutput" Alias="STBN" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_CONF" DataType="BOOL" InitialValue="" Comment="ST_CONF" Address="" Modifier="Constant" Kind="VarOutput" Alias="STCO" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_SPALT" DataType="BOOL" InitialValue="" Comment="ST_SPALT" Address="" Modifier="Constant" Kind="VarOutput" Alias="STSP" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_PARAM" DataType="BOOL" InitialValue="" Comment="ST_PARAM" Address="" Modifier="Constant" Kind="VarOutput" Alias="STPA" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_WWW" DataType="BOOL" InitialValue="" Comment="ST_WWW" Address="" Modifier="Constant" Kind="VarOutput" Alias="STWW" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="ST_WEB" DataType="BOOL" InitialValue="" Comment="ST_WEB" Address="" Modifier="Constant" Kind="VarOutput" Alias="STWE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="PERIOD_START" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="STATE1" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="STATE2" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="STATE3" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="STATE4" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="USB_TRANSFER" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_DATALOG" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="USB_TRANSFER" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="Activate download to USB" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="FILE" DataType="STRING" InitialValue="" Comment="Source File" Address="" Modifier="Constant" Kind="VarInput" Alias="FILE" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DESTFILE" DataType="STRING" InitialValue="" Comment="Destination File" Address="" Modifier="Constant" Kind="VarInput" Alias="DEST" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="OPT_EXT" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="OEXT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_OPERATION" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="LO" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="VALVE_CFG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="VALVE_CFG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Valve_Nr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="V_NR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Max_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="MAXS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Step_Rate" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="RATE" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Closing_Extra_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CLES" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Closing_Relax_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CLRS" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Custom_Closing_Extra_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="CCES" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Opening_Extra_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="OPES" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Opening_Relax_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="OPES" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Bipolar" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="BIPL" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Move_Curr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="MCUR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Hold_Curr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="HCUR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Advanced" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="ADV" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Error_Action" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EACT" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Prev_V_NR" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="VALVE_MOVE" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="VALVE_MOVE" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="Valve_Nr" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="V_NR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="STEP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Operation" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="OP" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Current_Error" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="ECUR" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Valve_Status" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="V_ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Valve_Position" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="VPOS" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="Prev_Op" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="Prev_Steps" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="Last" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="Retries" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="YUPDATE" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="YUPDATE" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STAT" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="STAT" AccessRights="ReadWrite" StringSize="255" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="PRIVATE" DataType="DINT" InitialValue="" Comment="PRIVATE" Address="" Modifier="Constant" Kind="Var" Alias="PRIV" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="ENABLE_OLD" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="ENO" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_TIME" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_RTC" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_TIME" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="ENABLE" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="YEAR" DataType="DINT" InitialValue="" Comment="YEAR" Address="" Modifier="Constant" Kind="VarInput" Alias="YEAR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MONTH" DataType="DINT" InitialValue="" Comment="MONTH" Address="" Modifier="Constant" Kind="VarInput" Alias="MTH" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="DAY" DataType="DINT" InitialValue="" Comment="DAY" Address="" Modifier="Constant" Kind="VarInput" Alias="DAY" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="HOUR" DataType="DINT" InitialValue="" Comment="HOUR" Address="" Modifier="Constant" Kind="VarInput" Alias="HOUR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="MINUTE" DataType="DINT" InitialValue="" Comment="MINUTE" Address="" Modifier="Constant" Kind="VarInput" Alias="MIN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="SECOND" DataType="DINT" InitialValue="" Comment="SECOND" Address="" Modifier="Constant" Kind="VarInput" Alias="SEC" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="RESET" DataType="BOOL" InitialValue="" Comment="RESET" Address="" Modifier="Constant" Kind="VarInput" Alias="RST" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="BOOL" InitialValue="" Comment="Q" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LAST_ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SET_VALUE_MAP" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAP" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SET_VALUE_MAP" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable set" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME_VAR" DataType="STRING" InitialValue="" Comment="var name" Address="" Modifier="Constant" Kind="VarInput" Alias="NVAR" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="POS_VAR" DataType="DINT" InitialValue="" Comment="var position" Address="" Modifier="Constant" Kind="VarInput" Alias="PVAR" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE_VAR" DataType="STRING" InitialValue="" Comment="var value" Address="" Modifier="Constant" Kind="VarInput" Alias="VVAR" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="STATUS" DataType="INT" InitialValue="" Comment="status" Address="" Modifier="Constant" Kind="VarOutput" Alias="ST" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="LENABLE" DataType="BOOL" InitialValue="" Comment="LENABLE" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SLOG" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SLOG" InitInstance="true" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NAME" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="NAM" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="VALUE" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="ReadWrite" StringSize="255" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="Q" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="Q" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="OLD" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SMS_NUM" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SMS_NUM" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NUMBER" DataType="DINT" InitialValue="" Comment="number of sms" Address="" Modifier="Constant" Kind="VarOutput" Alias="NUM" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SMS_READ" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SMS_READ" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NUMBER" DataType="STRING" InitialValue="" Comment="sender phone number" Address="" Modifier="Constant" Kind="VarOutput" Alias="SEND" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="TEXT" DataType="STRING" InitialValue="" Comment="message" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+    <Pou FileVersion="200.00.003" Name="SMS_SEND" ElementGuid="00000000-0000-0000-0000-000000000000" Comment="" SingleTextLine="" Language="C" CustomFbd="0" Localization="LibC" GroupName="DX_MAILSMS" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="false" Is1499="false">
+      <FunctionBlock IdentifierNb="0" Keyword="SMS_SEND" InitInstance="false" SymbMonExtraBytes="128" />
+      <LocalVars>
+        <Variable Name="ENABLE" DataType="BOOL" InitialValue="" Comment="enable" Address="" Modifier="Constant" Kind="VarInput" Alias="EN" AccessRights="ReadWrite" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="PROFILE" DataType="STRING" InitialValue="" Comment="profile file name" Address="" Modifier="Constant" Kind="VarInput" Alias="PROF" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="TEXT" DataType="STRING" InitialValue="" Comment="text of the message" Address="" Modifier="Constant" Kind="VarInput" Alias="TEXT" AccessRights="ReadWrite" StringSize="160" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="NUMBER" DataType="STRING" InitialValue="" Comment="sms number" Address="" Modifier="Constant" Kind="VarInput" Alias="NUM" AccessRights="ReadWrite" StringSize="100" Direction="Input" CommentFields="" Attributes="0" />
+        <Variable Name="CODE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="CODE" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="MSG" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="MSG" AccessRights="ReadWrite" StringSize="100" Direction="Output" CommentFields="" Attributes="0" />
+        <Variable Name="step" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="ticket" DataType="STRING" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="100" Direction="Local" CommentFields="" Attributes="0" />
+        <Variable Name="last_enable" DataType="BOOL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+      </LocalVars>
+      <PouBody />
+      <PouUIProperties />
+    </Pou>
+  </Pous>
+  <IODevices>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="ER_LAST" DataType="SINT" MinChannel="1" MaxChannel="16" Direction="Input" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="line number for diagnostic" />
+        <Parameter Name="brd_type" Number="2" Format="Word" Default="1" Access="UserDefined" SingleTextLine="AI=1, AO=2, DI=3, DO=4" />
+        <Parameter Name="hold" Number="3" Format="Boolean" Default="0" Access="UserDefined" SingleTextLine="0 for last transaction result. 1 hold last error" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="GENAI" DataType="DINT" MinChannel="1" MaxChannel="32" Direction="Input" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="number of IO line" />
+        <Parameter Name="par_1" Number="2" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 1" />
+        <Parameter Name="par_2" Number="3" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 2" />
+        <Parameter Name="par_3" Number="4" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 3" />
+        <Parameter Name="par_4" Number="5" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 4" />
+        <Parameter Name="par_5" Number="6" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 5" />
+        <Parameter Name="par_6" Number="7" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 6" />
+        <Parameter Name="par_7" Number="8" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 7" />
+        <Parameter Name="par_8" Number="9" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 8" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="ER_NUM" DataType="USINT" MinChannel="1" MaxChannel="32" Direction="Input" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="line number for daignostic" />
+        <Parameter Name="brd_type" Number="2" Format="Word" Default="1" Access="UserDefined" SingleTextLine="AI=1, AO=2, DI=3, DO=4" />
+        <Parameter Name="reset_time" Number="3" Format="Long" Default="10" Access="UserDefined" SingleTextLine="reset time in sec. 0 means never" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="GENDO" DataType="BOOL" MinChannel="1" MaxChannel="32" Direction="Output" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="number fo IO line" />
+        <Parameter Name="par_1" Number="2" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 1" />
+        <Parameter Name="par_2" Number="3" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 2" />
+        <Parameter Name="par_3" Number="4" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 3" />
+        <Parameter Name="par_4" Number="5" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 4" />
+        <Parameter Name="par_5" Number="6" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 5" />
+        <Parameter Name="par_6" Number="7" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 6" />
+        <Parameter Name="par_7" Number="8" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 7" />
+        <Parameter Name="par_8" Number="9" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 8" />
+        <Parameter Name="hold" Number="10" Format="Boolean" Default="0" Access="UserDefined" SingleTextLine="hold output on exit" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="GENLINE" DataType="BOOL" MinChannel="1" MaxChannel="1" Direction="Input" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="line number" />
+        <Parameter Name="name" Number="2" Format="String" Default="" Access="UserDefined" SingleTextLine="protocol name" />
+        <Parameter Name="par_1" Number="3" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 1" />
+        <Parameter Name="par_2" Number="4" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 2" />
+        <Parameter Name="par_3" Number="5" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 3" />
+        <Parameter Name="par_4" Number="6" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 4" />
+        <Parameter Name="par_5" Number="7" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 5" />
+        <Parameter Name="par_6" Number="8" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 6" />
+        <Parameter Name="par_7" Number="9" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 7" />
+        <Parameter Name="par_8" Number="10" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 8" />
+        <Parameter Name="num_ai_brd" Number="11" Format="Word" Default="32" Access="UserDefined" SingleTextLine="number of analog input board" />
+        <Parameter Name="num_ao_brd" Number="12" Format="Word" Default="32" Access="UserDefined" SingleTextLine="number of analog output board" />
+        <Parameter Name="num_di_brd" Number="13" Format="Word" Default="32" Access="UserDefined" SingleTextLine="number of digital input board" />
+        <Parameter Name="num_do_brd" Number="14" Format="Word" Default="32" Access="UserDefined" SingleTextLine="number of digital output board" />
+        <Parameter Name="max_ai_ch" Number="15" Format="Word" Default="32" Access="ReadOnly" SingleTextLine="max analog input channel" />
+        <Parameter Name="max_ao_ch" Number="16" Format="Word" Default="32" Access="ReadOnly" SingleTextLine="max anolog output channel" />
+        <Parameter Name="max_di_ch" Number="17" Format="Word" Default="32" Access="ReadOnly" SingleTextLine="max digital input channel" />
+        <Parameter Name="max_do_ch" Number="18" Format="Word" Default="32" Access="ReadOnly" SingleTextLine="max digital output channel" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="GENAO" DataType="DINT" MinChannel="1" MaxChannel="32" Direction="Output" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="number of IO line" />
+        <Parameter Name="par_1" Number="2" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 1" />
+        <Parameter Name="par_2" Number="3" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 2" />
+        <Parameter Name="par_3" Number="4" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 3" />
+        <Parameter Name="par_4" Number="5" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 4" />
+        <Parameter Name="par_5" Number="6" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 5" />
+        <Parameter Name="par_6" Number="7" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 6" />
+        <Parameter Name="par_7" Number="8" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 7" />
+        <Parameter Name="par_8" Number="9" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 8" />
+        <Parameter Name="hold" Number="10" Format="Boolean" Default="0" Access="UserDefined" SingleTextLine="hold output on exit" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+    <IODevice DriverName="IO_" PackageName="DIX_" Name="GENDI" DataType="BOOL" MinChannel="1" MaxChannel="32" Direction="Input" IsSimple="true" Comment="" SingleTextLine="">
+      <Parameters>
+        <Parameter Name="line_num" Number="1" Format="Word" Default="0" Access="UserDefined" SingleTextLine="number of IO line" />
+        <Parameter Name="par_1" Number="2" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 1" />
+        <Parameter Name="par_2" Number="3" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 2" />
+        <Parameter Name="par_3" Number="4" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 3" />
+        <Parameter Name="par_4" Number="5" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 4" />
+        <Parameter Name="par_5" Number="6" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 5" />
+        <Parameter Name="par_6" Number="7" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 6" />
+        <Parameter Name="par_7" Number="8" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 7" />
+        <Parameter Name="par_8" Number="9" Format="String" Default="" Access="UserDefined" SingleTextLine="parameter 8" />
+      </Parameters>
+      <ChannelParameters />
+    </IODevice>
+  </IODevices>
+</Target>

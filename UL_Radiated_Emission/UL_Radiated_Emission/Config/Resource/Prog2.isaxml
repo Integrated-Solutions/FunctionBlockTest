@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="Prog2" ElementGuid="b4ea36b1-7718-43e6-8904-d26ed4f88c98" Comment="" SingleTextLine="" Language="FBD" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <Program />
+  <LocalVars>
+    <Variable Name="steinhart_1" DataType="steinhart" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="rResistance" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="k_to_f_1" DataType="k_to_f" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="Temp2Volt_1" DataType="Temp2Volt" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="SIMULATE_10K_NTC_1" DataType="SIMULATE_10K_NTC" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+  </LocalVars>
+  <PouBody><![CDATA[PROGRAM Prog2
+#info= FBD
+@@NBID=8
+@BOX:1,P=(240,204),S=(96,60),C=(1,1),X=steinhart_1
+T=steinhart
+@BOX:3,P=(352,204),S=(128,60),C=(1,1),X=k_to_f_1
+T=k_to_f
+@BOX:6,P=(240,300),S=(112,60),C=(1,1),X=Temp2Volt_1
+T=Temp2Volt
+@BOX:9,P=(224,384),S=(144,60),C=(1,1),X=SIMULATE_10K_NTC_1
+T=SIMULATE_10K_NTC
+@VAR:2,P=(144,228),S=(80,24),C=(1,1),X=rResistance
+@VAR:7,P=(128,324),S=(96,24),C=(1,1),X=rTemp_Desire
+@VAR:10,P=(128,408),S=(64,24),C=(1,1),X=TEMPDES
+@VAR:11,P=(384,408),S=(128,24),C=(1,1),X=ANALOG_VOLTAGE
+@ARC:D=0,Z=(0,0),F=(2,0),T=(1,0)
+P=(224.240;224.240;224.240;240.240)
+@ARC:D=0,Z=(0,0),F=(1,0),T=(3,0)
+P=(336.240;336.240;336.240;352.240)
+@ARC:D=0,Z=(0,0),F=(7,0),T=(6,0)
+P=(224.336;224.336;224.336;240.336)
+@ARC:D=0,Z=(0,0),F=(10,0),T=(9,0)
+P=(192.420;192.420;208.420;224.420)
+@ARC:D=0,Z=(0,0),F=(9,0),T=(11,0)
+P=(368.420;368.420;368.420;384.420)
+#end_info
+#info= OTHER
+Version=I:2
+Scaling=PI(1,1)
+CellSize=PI(16,12)
+#end_info
+#info= ID_MAX
+NextId=11
+#end_info
+END_PROGRAM]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle ContainerDisplayGrid="true" Comment.BackgroundColor="LightGreen" LeftPowerRail.BackgroundColor="DimGray" LeftPowerRail.GradientColor="DimGray" Link.PenColor="Black" Link.IsArrow="false" Link.LineStyle="Solid" Link.LineType="Normal" LinkEvent.PenColor="DimGray" LinkEvent.IsArrow="false" LinkEvent.LineStyle="Solid" LinkEvent.LineType="Normal" PouCall.DispayInstanceName="true" PouCall.BackgroundColor="#FFA0B8EA" PouCall.GradientColor="#FF034EA2" PouCall.Alpha="255" PouCallOperator.DispayInstanceName="true" PouCallOperator.BackgroundColor="White" PouCallOperator.GradientColor="#FF7B87C2" PouCallOperator.Alpha="255" Region.HeaderColor="LightGrey" Region.BackgroundColor="LightGreen" Region.Alpha="32" Region.HeaderAlpha="255" RightPowerRail.BackgroundColor="DimGray" RightPowerRail.GradientColor="DimGray" Variable.BackgroundColor="SteelBlue" Variable.GradientColor="LightSteelBlue" Variable.Alpha="255" Variable.DisplayMode="NameAndAlias" Variable.CommentPosition="None" VariableConstant.BackgroundColor="LightGrey" VariableConstant.GradientColor="LightGrey" VariableConstant.Alpha="255" VariableConstant.DisplayMode="NameAndAlias" VariableConstant.CommentPosition="None" AutoInput="true" Index="0">
+    <Connection From="steinhart_1.rKelvin" To="k_to_f_1.rKelvin" Points="336,240 336,240 336,240 352,240" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(1,0)(3,0)" />
+    <Connection From="TEMPDES" To="SIMULATE_10K_NTC_1.iTemp" Points="192,420 192,420 208,420 224,420" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(10,0)(9,0)" />
+    <Connection From="" To="steinhart_1.rR" Points="224,240 224,240 224,240 240,240" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(2,0)(1,0)" />
+    <Connection From="rTemp_Desire" To="Temp2Volt_1.rTemp_F" Points="224,336 224,336 224,336 240,336" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(7,0)(6,0)" />
+    <Connection From="SIMULATE_10K_NTC_1.iAnalogOut" To="ANALOG_VOLTAGE" Points="368,420 368,420 368,420 384,420" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(9,0)(11,0)" />
+    <PouCall Top="204" Left="240" Width="96" Height="60" DataType="steinhart" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="steinhart_1" Key="1" />
+    <Variable Top="408" Left="128" Width="64" Name="TEMPDES" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="DINT" Key="10" />
+    <Variable Top="408" Left="384" Width="128" Name="ANALOG_VOLTAGE" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="DINT" Key="11" />
+    <Variable Top="228" Left="144" Width="80" Name="rResistance" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="REAL" Key="2" />
+    <PouCall Top="204" Left="352" Width="128" Height="60" DataType="k_to_f" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="k_to_f_1" Key="3" />
+    <PouCall Top="300" Left="240" Width="112" Height="60" DataType="Temp2Volt" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="Temp2Volt_1" Key="6" />
+    <Variable Top="324" Left="128" Width="96" Name="rTemp_Desire" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="REAL" Key="7" />
+    <PouCall Top="384" Left="224" Width="144" Height="60" DataType="SIMULATE_10K_NTC" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="SIMULATE_10K_NTC_1" Key="9" />
+  </LanguageContainerStyle>
+</Root>
+  </PouUIProperties>
+</Pou>

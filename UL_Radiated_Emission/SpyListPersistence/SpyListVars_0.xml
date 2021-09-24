@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpyListVars_0>
+  <ConfigurationInfo>
+    <SpyListName>Spy List Name[1]</SpyListName>
+    <ConfigFileVersion>3</ConfigFileVersion>
+    <ToolWindowPaneIndex>0</ToolWindowPaneIndex>
+    <DefaultRefreshRateMonitoring>500</DefaultRefreshRateMonitoring>
+  </ConfigurationInfo>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.RL01</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.RL07</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.RL10</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.RL11</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.tmrSeq</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.ANALOG_VOLTAGE</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.TEMPDES</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.AO01</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.Prog2.Temp2Volt_1</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.AI07</FullName>
+  </Variable>
+  <Variable>
+    <FullName>UL_Radiated_Emission.Config.Resource.Prog2.SIMULATE_10K_NTC_1</FullName>
+  </Variable>
+</SpyListVars_0>

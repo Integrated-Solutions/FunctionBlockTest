@@ -1,0 +1,85 @@
+FUNCTION_BLOCK P_Reg
+(*
+ * PID regulator
+ *
+ * @param Signal_Input: analog input
+ * @param Setpoint: set point
+ * @param Pid_PB: proportional band
+ * @param Pid_RS: band offset
+ * @return PId_Out: output in range 0-100
+ * @return STT: status: 0->ok, else parameters not consistent
+ *)
+
+
+	Status := 0;
+
+	IF (Pid_PB = 0) THEN 
+		Status := -1;
+	END_IF; 
+
+	IF (Status <0) THEN 
+		Pid_Out := 0;
+		RETURN;
+	END_IF; 
+
+	IF (Init = FALSE)  THEN 
+		(* Initialization *)
+		P := 0;
+		Status := 0;
+		Init := TRUE;
+		E_Prev:=0;
+	END_IF; 
+
+	IF (Prev_PB <> Pid_PB) THEN 
+		Real_PB := ANY_TO_REAL(Pid_PB);
+		Prev_PB := Pid_PB;
+	END_IF; 
+	
+	
+	(* Update the error *)
+	E := Signal_Input - Setpoint;
+
+	(* Update the proportional part = Error / Proportional Band *)
+	P := E / Pid_PB;
+
+    (*Update integral every second*)
+	Pid_INC(true,t#1s);
+		
+	if Pid_INC.Q = true THEN
+		Pid_INC(FALSE,t#1s);	
+	
+		I:=(E_Prev+E)/(Pid_PB*Pid_Int);
+		
+	END_IF;
+	
+    	E_Prev:=E;
+
+	(* Update the Control Variable *)
+	Pid_Out_temp := 100*( P + I);
+
+	(*Update the Control Variable *)
+	Pid_Out := Pid_Out_temp;
+	IF (Pid_Out > 100) THEN 
+		Pid_Out := 100;
+	ELSIF (Pid_Out < 0) THEN 
+		Pid_Out := 0;
+	END_IF; 
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END_FUNCTION_BLOCK

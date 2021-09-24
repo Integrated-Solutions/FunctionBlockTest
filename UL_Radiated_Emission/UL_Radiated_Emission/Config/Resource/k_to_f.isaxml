@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="k_to_f" ElementGuid="87d784e1-104d-48ee-ab14-e3ebca182634" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <FunctionBlock IdentifierNb="0" Keyword="" InitInstance="false" SymbMonExtraBytes="128" />
+  <LocalVars>
+    <Variable Name="rKelvin" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+    <Variable Name="rfahrenheit" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+  </LocalVars>
+  <PouBody><![CDATA[FUNCTION_BLOCK k_to_f
+rfahrenheit := 1.8*(rKelvin - 273.0) + 32.0;
+END_FUNCTION_BLOCK]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>

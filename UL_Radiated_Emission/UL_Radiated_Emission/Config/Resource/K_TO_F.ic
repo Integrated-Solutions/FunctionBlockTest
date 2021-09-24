@@ -1,0 +1,5 @@
+__TMPR2 := __K_TO_F [ __DINT_NULL ]
+__TMPR2 := __TMPR2 - __TMPR3 
+__TMPR4 := __TMPR1 * __TMPR2 
+__TMPR4 := __TMPR4 + __TMPR5 
+__K_TO_F [ __CDINT00000004 ] := __TMPR4 

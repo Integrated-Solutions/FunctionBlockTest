@@ -1,0 +1,9 @@
+FUNCTION_BLOCK SIMULATE_10K_NTC
+IF iTemp > 24 and iTemp < 46 THEN
+iAnalogOut := (((-1*iTemp*iTemp*iTemp*iTemp) - (8*iTemp*iTemp*iTemp) + (70000*iTemp*iTemp) + (6500000*iTemp)+(252100000))/1000000)-17;
+ELSIF iTemp > 123 THEN
+iAnalogOut := (((-5*iTemp*iTemp)+(2680*iTemp)-(71970))/100)+(iTemp-90);  
+ELSE
+iAnalogOut := (((-1*iTemp*iTemp*iTemp*iTemp) - (8*iTemp*iTemp*iTemp) + (70000*iTemp*iTemp) + (6500000*iTemp)+(252100000))/1000000)-6;
+END_IF;
+END_FUNCTION_BLOCK

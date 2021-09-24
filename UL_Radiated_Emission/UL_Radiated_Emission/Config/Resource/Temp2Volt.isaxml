@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="Temp2Volt" ElementGuid="10183928-d1ac-4dc6-882b-f839391251f8" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <FunctionBlock IdentifierNb="0" Keyword="" InitInstance="false" SymbMonExtraBytes="128" />
+  <LocalVars>
+    <Variable Name="rTemp_F" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+    <Variable Name="iVolt" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+    <Variable Name="mA" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mB" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mC" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mX" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mY" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrVolt" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrTemp_K" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrOhm" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrCubeRootA" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrCubeRootB" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="mrTempVolt" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+  </LocalVars>
+  <PouBody><![CDATA[FUNCTION_BLOCK Temp2Volt
+mrTemp_K := (5.0/9.0)*(rTemp_F-32.0)+273.0;
+
+mA := 0.001125308852122;
+mB := 0.000234711863267;
+mC := 0.000000085663516;
+
+mX := (1.0/mC)*(mA-(1.0/mrTemp_K));
+mY := SQRT(((mB/(3.0*mC))*(mB/(3.0*mC))*(mB/(3.0*mC))) +((mX/2.0)*(mX/2.0)));
+
+mrCubeRootA := POW((mY - (mX/2.0)), (1.0/3.0));
+mrCubeRootB := POW((mY + (mX/2.0)), (1.0/3.0));
+
+mrOhm := POW(2.718281828459, (mrCubeRootA - mrCubeRootB));
+
+mrVolt := (3.3* 5110.0)/(5110.0 + mrOhm);
+
+mrTempVolt := mrVolt * 1000.00;
+
+iVolt := ANY_TO_DINT(mrTempVolt);
+
+
+
+END_FUNCTION_BLOCK]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>

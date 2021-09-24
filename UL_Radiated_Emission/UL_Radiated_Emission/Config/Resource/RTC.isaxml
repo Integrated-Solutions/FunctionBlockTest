@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="RTC" ElementGuid="a9a6fa93-43ae-4c51-b741-c3fb48980100" Comment="" SingleTextLine="" Language="FBD" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <Program />
+  <LocalVars />
+  <PouBody><![CDATA[PROGRAM RTC
+#info= FBD
+@@NBID=3
+@BOX:1,P=(156,4),S=(69,65),C=(1,8),X=GET_TIME
+T=GET_TIME
+@BOX:2,P=(157,84),S=(69,72),C=(1,11),X=GET_LOCALTIME
+T=GET_LOCALTIME
+@VAR:3,P=(103,34),S=(34,5),C=(1,1),X=TRUE
+@ARC:D=0,Z=(0,0),F=(3,0),T=(1,0)
+P=(140.36;153.36)
+@ARC:D=0,Z=(0,0),F=(3,0),T=(2,0)
+P=(140.36;147.36;147.120;154.120)
+#end_info
+#info= ID_MAX
+NextId=4
+#end_info
+END_PROGRAM]]></PouBody>
+  <PouUIProperties />
+</Pou>

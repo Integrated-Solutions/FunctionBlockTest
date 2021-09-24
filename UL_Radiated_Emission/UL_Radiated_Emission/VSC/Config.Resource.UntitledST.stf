@@ -1,0 +1,13 @@
+PROGRAM UntitledST
+IF EnableLog = TRUE THEN
+
+	mylog (TRUE,'DatiImpianto',10000,'pippo',t#0s,FALSE);
+	mylog (FALSE,'DatiImpianto',10000,'pippo',t#0s,FALSE);
+
+
+END_IF;
+
+a:=5/b;
+arr[vararr]:=TRUE;
+
+END_PROGRAM

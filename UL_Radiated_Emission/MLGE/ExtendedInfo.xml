@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectElements>
+  <AcfElementGuid Guid="10183928-d1ac-4dc6-882b-f839391251f8">
+    <File>Temp2Volt.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="3d161ec2-f683-41a0-8353-daa313868ac1">
+    <File>Prog1.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="87d784e1-104d-48ee-ab14-e3ebca182634">
+    <File>k_to_f.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="b3bc7774-f1fc-40da-9661-960cc5c5eb8a">
+    <File>steinhart.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="b4ea36b1-7718-43e6-8904-d26ed4f88c98">
+    <File>Prog2.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="cf9a8e82-7390-48a8-be2a-0ada7710392b">
+    <File>P_Reg.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="eaebf1c8-bc37-4e6f-a062-b90ce983a203">
+    <File>TestSequence.AcfMlge</File>
+  </AcfElementGuid>
+  <AcfElementGuid Guid="ee008b8b-ea28-45c7-970a-a2d6d4652eab">
+    <File>SIMULATE_10K_NTC.AcfMlge</File>
+  </AcfElementGuid>
+</ProjectElements>

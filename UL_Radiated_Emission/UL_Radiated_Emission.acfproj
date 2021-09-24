@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{dd54d35f-0e11-4fef-a0a5-9609c36a0d52}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyRootNamespace</RootNamespace>
+    <AssemblyName>MyAssemblyName</AssemblyName>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <CAMProjectFile>UL_Radiated_Emission\PrjLibrary.mdb</CAMProjectFile>
+    <UniqueProjectId>{dd54d35f-0e11-4fef-a0a5-9609c36a0d52}</UniqueProjectId>
+    <CAMProjectVersion>5.50.7</CAMProjectVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Online' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Simulation' " />
+  <Import Project="$(DevEnvDir)\PackagesToLoad\Targets\ISaGRAF.ISaGRAF5.targets" />
+</Project>

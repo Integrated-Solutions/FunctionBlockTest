@@ -1,0 +1,7 @@
+PROGRAM Prog1
+For i := 1 to 10 by 1 DO
+	If tmTest[i].q = tmtest2.q THEN
+	tmtest2(FALSE, t#0);	
+END_FOR;
+	
+END_PROGRAM

@@ -1,0 +1,24 @@
+FUNCTION_BLOCK Temp2Volt
+mrTemp_K := (5.0/9.0)*(rTemp_F-32.0)+273.0;
+
+mA := 0.001125308852122;
+mB := 0.000234711863267;
+mC := 0.000000085663516;
+
+mX := (1.0/mC)*(mA-(1.0/mrTemp_K));
+mY := SQRT(((mB/(3.0*mC))*(mB/(3.0*mC))*(mB/(3.0*mC))) +((mX/2.0)*(mX/2.0)));
+
+mrCubeRootA := POW((mY - (mX/2.0)), (1.0/3.0));
+mrCubeRootB := POW((mY + (mX/2.0)), (1.0/3.0));
+
+mrOhm := POW(2.718281828459, (mrCubeRootA - mrCubeRootB));
+
+mrVolt := (3.3* 5110.0)/(5110.0 + mrOhm);
+
+mrTempVolt := mrVolt * 1000.00;
+
+iVolt := ANY_TO_DINT(mrTempVolt);
+
+
+
+END_FUNCTION_BLOCK

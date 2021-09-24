@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration FileVersion="200.00.003" Name="Config" ElementGuid="66a62007-07f4-4f69-b046-f629f7d07700" onlineBehavior="Always" TargetName="ARM-TARGET_L" Comment="&#xD;&#xA;&#xD;&#xA;Resources 1" SingleTextLine="Config Template Dixell" Password="" IsEnhanced="false" IsEnhancedTarget="false" IsIsagraf3="false">
+  <Connections>
+    <Connection NetworkName="ETCP1">
+      <Parameter Name="IPAddress" Value="192.168.0.250" />
+    </Connection>
+  </Connections>
+  <Resource Name="Resource" ElementGuid="9b80a6e0-e018-45f9-89bd-5999aa581829" />
+</Configuration>

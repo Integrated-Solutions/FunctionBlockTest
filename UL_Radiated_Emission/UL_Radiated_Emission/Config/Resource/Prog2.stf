@@ -1,0 +1,35 @@
+PROGRAM Prog2
+#info= FBD
+@@NBID=8
+@BOX:1,P=(240,204),S=(96,60),C=(1,1),X=steinhart_1
+T=steinhart
+@BOX:3,P=(352,204),S=(128,60),C=(1,1),X=k_to_f_1
+T=k_to_f
+@BOX:6,P=(240,300),S=(112,60),C=(1,1),X=Temp2Volt_1
+T=Temp2Volt
+@BOX:9,P=(224,384),S=(144,60),C=(1,1),X=SIMULATE_10K_NTC_1
+T=SIMULATE_10K_NTC
+@VAR:2,P=(144,228),S=(80,24),C=(1,1),X=rResistance
+@VAR:7,P=(128,324),S=(96,24),C=(1,1),X=rTemp_Desire
+@VAR:10,P=(128,408),S=(64,24),C=(1,1),X=TEMPDES
+@VAR:11,P=(384,408),S=(128,24),C=(1,1),X=ANALOG_VOLTAGE
+@ARC:D=0,Z=(0,0),F=(2,0),T=(1,0)
+P=(224.240;224.240;224.240;240.240)
+@ARC:D=0,Z=(0,0),F=(1,0),T=(3,0)
+P=(336.240;336.240;336.240;352.240)
+@ARC:D=0,Z=(0,0),F=(7,0),T=(6,0)
+P=(224.336;224.336;224.336;240.336)
+@ARC:D=0,Z=(0,0),F=(10,0),T=(9,0)
+P=(192.420;192.420;208.420;224.420)
+@ARC:D=0,Z=(0,0),F=(9,0),T=(11,0)
+P=(368.420;368.420;368.420;384.420)
+#end_info
+#info= OTHER
+Version=I:2
+Scaling=PI(1,1)
+CellSize=PI(16,12)
+#end_info
+#info= ID_MAX
+NextId=11
+#end_info
+END_PROGRAM

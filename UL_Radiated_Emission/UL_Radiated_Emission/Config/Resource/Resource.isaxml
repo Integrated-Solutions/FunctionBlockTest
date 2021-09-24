@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resource FileVersion="200.00.003" Name="Resource" ResourceNb="1" ElementGuid="9b80a6e0-e018-45f9-89bd-5999aa581829" Address="@1" Comment="Resources 1" SingleTextLine="Dixell Template" GenDebugInfo="true" Password="" ReadOnly="false" UsePrjPassword="false" Code="TicCode">
+  <Properties Test="true" TrigCycle="true" CyTiming="100" DeErrors="true" NbStErrors="16" ExecMode="true" EmbedTable="true" TypeEmbedTable="2" EmbedSource="false" TypeEmbedSource="2" SimulationCode="true" SfcGain="8" SfcOffset="18" EmbeddedSfc="false" ReadableImage="false" RealImage="false" LocExp="false" unlab="false" AriOpe="false" BooOpe="false" BooExp="false" GloExp="false" VarCpy="false" Uncod="false" MapFile="false" DumpPou="false" DumpConfig="false" DumpNetwork="false" CompileIncrementally="true" LinkIncrementally="true" CheckArray="true" ArrStr="false" OnlineMemory="32000" OnlineMemoryVariable="2048" MemRetain="RETAIN" FunctionInternalStateEnable="true" FbdBehaviorMode="1" OnlineMaxExtraPous="20" OnlineMemorySfc="20" CyUsTiming="0" IsDisableAccessFBLocalVar="true" EnableCVT="false" ReduceBooleanExpressionEvaluation="false" IsIndirectBitAccessValidation="true" />
+  <Pous>
+    <FunctionBlock Name="P_Reg" ElementGuid="cf9a8e82-7390-48a8-be2a-0ada7710392b" Language="ST" CustomFbd="0" Is1499="false" />
+    <FunctionBlock Name="steinhart" ElementGuid="b3bc7774-f1fc-40da-9661-960cc5c5eb8a" Language="ST" CustomFbd="0" Is1499="false" />
+    <FunctionBlock Name="k_to_f" ElementGuid="87d784e1-104d-48ee-ab14-e3ebca182634" Language="ST" CustomFbd="0" Is1499="false" />
+    <FunctionBlock Name="Temp2Volt" ElementGuid="10183928-d1ac-4dc6-882b-f839391251f8" Language="ST" CustomFbd="0" Is1499="false" />
+    <FunctionBlock Name="SIMULATE_10K_NTC" ElementGuid="ee008b8b-ea28-45c7-970a-a2d6d4652eab" Language="ST" CustomFbd="0" Is1499="false" />
+    <Program Name="TestSequence" ElementGuid="eaebf1c8-bc37-4e6f-a062-b90ce983a203" Language="ST" CustomFbd="0" Is1499="false" />
+    <Program Name="Prog1" ElementGuid="3d161ec2-f683-41a0-8353-daa313868ac1" Language="ST" CustomFbd="0" Is1499="false" />
+    <Program Name="Prog2" ElementGuid="b4ea36b1-7718-43e6-8904-d26ed4f88c98" Language="FBD" CustomFbd="0" Is1499="false" />
+  </Pous>
+  <NetworkParameterValues>
+    <NetworkParameterValue NetworkName="HSD" Name="ValidityTime" Value="0" />
+    <NetworkParameterValue NetworkName="ETCP" Name="TimeOut" Value="10000" />
+  </NetworkParameterValues>
+  <GlobalVars>
+    <Variable Name="ApplicationRelease" DataType="STRING" InitialValue="'Empty application'" Comment="String visible in the web page STATUS after &quot;Application Release is&quot;" Address="F200" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="20" RetainFlags="" CommentFields="" Attributes="0" GroupName="ApplicationRelease" />
+    <Variable Name="AI01" DataType="DINT" InitialValue="" Comment="Analog Input AI01" Address="F000" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI02" DataType="DINT" InitialValue="" Comment="Analog Input AI02" Address="F001" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI03" DataType="DINT" InitialValue="" Comment="Analog Input AI03" Address="F002" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI04" DataType="DINT" InitialValue="" Comment="Analog Input AI04" Address="F003" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI05" DataType="DINT" InitialValue="" Comment="Analog Input AI05" Address="F004" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI06" DataType="DINT" InitialValue="" Comment="Analog Input AI06" Address="F005" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI07" DataType="DINT" InitialValue="" Comment="Analog Input AI07 (only for 10DIN models)" Address="F006" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI08" DataType="DINT" InitialValue="" Comment="Analog Input AI08 (only for 10DIN models)" Address="F007" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI09" DataType="DINT" InitialValue="" Comment="Analog Input AI09 (only for 10DIN models)" Address="F008" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AI10" DataType="DINT" InitialValue="" Comment="Analog Input AI10 (only for 10DIN models)" Address="F009" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_01" DataType="BOOL" InitialValue="" Comment="Analog Input AI01 if used as Digital Input" Address="F010" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_02" DataType="BOOL" InitialValue="" Comment="Analog Input AI02 if used as Digital Input" Address="F011" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_03" DataType="BOOL" InitialValue="" Comment="Analog Input AI03 if used as Digital Input" Address="F012" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_04" DataType="BOOL" InitialValue="" Comment="Analog Input AI04 if used as Digital Input" Address="F013" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_05" DataType="BOOL" InitialValue="" Comment="Analog Input AI05 if used as Digital Input" Address="F014" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_06" DataType="BOOL" InitialValue="" Comment="Analog Input AI06 if used as Digital Input" Address="F015" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_07" DataType="BOOL" InitialValue="" Comment="Analog Input AI07 if used as Digital Input (only for 10DIN models)" Address="F016" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_08" DataType="BOOL" InitialValue="" Comment="Analog Input AI08 if used as Digital Input (only for 10DIN models)" Address="F017" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_09" DataType="BOOL" InitialValue="" Comment="Analog Input AI09 if used as Digital Input (only for 10DIN models)" Address="F018" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AIasDI_10" DataType="BOOL" InitialValue="" Comment="Analog Input AI10 if used as Digital Input (only for 10DIN models)" Address="F019" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO01" DataType="DINT" InitialValue="" Comment="Analog Output AO01" Address="F020" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO02" DataType="DINT" InitialValue="" Comment="Analog Output AO02" Address="F021" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO03" DataType="DINT" InitialValue="" Comment="Analog Output AO03" Address="F022" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO04" DataType="DINT" InitialValue="" Comment="Analog Output AO04" Address="F023" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO05" DataType="DINT" InitialValue="" Comment="Analog Output AO05 (only for 10DIN models)" Address="F024" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="AO06" DataType="DINT" InitialValue="" Comment="Analog Output AO06 (only for 10DIN models)" Address="F025" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI01" DataType="DINT" InitialValue="" Comment="Analog Input 1 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F030" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI02" DataType="DINT" InitialValue="" Comment="Analog Input 2 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F031" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI03" DataType="DINT" InitialValue="" Comment="Analog Input 3 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F032" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI04" DataType="DINT" InitialValue="" Comment="Analog Input 4 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F033" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI05" DataType="DINT" InitialValue="" Comment="Analog Input 5 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F034" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI06" DataType="DINT" InitialValue="" Comment="Analog Input 6 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F035" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI07" DataType="DINT" InitialValue="" Comment="Analog Input 7 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F036" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI08" DataType="DINT" InitialValue="" Comment="Analog Input 8 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F037" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI09" DataType="DINT" InitialValue="" Comment="Analog Input 9 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F038" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAI10" DataType="DINT" InitialValue="" Comment="Analog Input 10 setup: 0= NTC, 1=PTC, 2=2..20mA, 3=4..20mA, 4=0..10V, 5=0..1V, 6=0..5V, 7= Digital input, 8=CPC/ERS" Address="F039" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO01" DataType="DINT" InitialValue="" Comment="Analog Output 1 setup: 0=0..10V (only for 10DIN models); 0=0..10V, 1=4..20mA, 2=Relay (only for 4DIN models)" Address="F040" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO02" DataType="DINT" InitialValue="" Comment="Analog Output 2 setup: 0=0..10V (only for 10DIN models); 0=0..10V, 1=4..20mA, 2=Relay (only for 4DIN models)" Address="F041" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO03" DataType="DINT" InitialValue="" Comment="Analog Output 3 setup: 0=0..10V (only for 10DIN models); 0=0..10V, 1=4..20mA, 2=Relay (only for 4DIN models)" Address="F042" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO04" DataType="DINT" InitialValue="" Comment="Analog Output 4 setup: 0=0..10V (only for 10DIN models); 0=0..10V, 1=4..20mA, 2=Relay (only for 4DIN models)" Address="F043" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO05" DataType="DINT" InitialValue="" Comment="Analog Output 5 setup: 0=0..10V, 1=4..20mA, 2=Relay, 3=PWM (only for 10DIN models)" Address="F044" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ConfAO06" DataType="DINT" InitialValue="" Comment="Analog Output 6 setup: 0=0..10V, 1=4..20mA, 2=Relay, 3=PWM (only for 10DIN models)" Address="F045" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI01" DataType="BOOL" InitialValue="" Comment="Digital Input DI01" Address="F050" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI02" DataType="BOOL" InitialValue="" Comment="Digital Input DI02" Address="F051" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI03" DataType="BOOL" InitialValue="" Comment="Digital Input DI03" Address="F052" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI04" DataType="BOOL" InitialValue="" Comment="Digital Input DI04" Address="F053" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI05" DataType="BOOL" InitialValue="" Comment="Digital Input DI05" Address="F054" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI06" DataType="BOOL" InitialValue="" Comment="Digital Input DI06" Address="F055" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI07" DataType="BOOL" InitialValue="" Comment="Digital Input DI07" Address="F056" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI08" DataType="BOOL" InitialValue="" Comment="Digital Input DI08" Address="F057" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI09" DataType="BOOL" InitialValue="" Comment="Digital Input DI09" Address="F058" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI10" DataType="BOOL" InitialValue="" Comment="Digital Input DI10" Address="F059" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="DI11" DataType="BOOL" InitialValue="" Comment="Digital Input DI11" Address="F05A" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="IO_ANALOG_INPUT1" DataType="DINT" InitialValue="" Comment="" Address="1000" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI12" DataType="BOOL" InitialValue="" Comment="Digital Input DI12 (only for 10DIN models)" Address="F05B" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="tmrSeq" DataType="TON" InitialValue="" Comment="Keeps pace of output triggers" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI13" DataType="BOOL" InitialValue="" Comment="Digital Input DI13 (only for 10DIN models)" Address="F05C" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="ANALOG_VOLTAGE" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI14" DataType="BOOL" InitialValue="" Comment="Digital Input DI14 (only for 10DIN models)" Address="F05D" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="tempcalc" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI15" DataType="BOOL" InitialValue="" Comment="Digital Input DI15 (only for 10DIN models)" Address="F05E" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="TEMPDES" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI16" DataType="BOOL" InitialValue="" Comment="Digital Input DI16 (only for 10DIN models)" Address="F05F" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="tempF" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI17" DataType="BOOL" InitialValue="" Comment="Digital Input DI17 (only for 10DIN models)" Address="F060" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="SteinA" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI18" DataType="BOOL" InitialValue="" Comment="Digital Input DI18 (only for 10DIN models)" Address="F061" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="SteinB" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI19" DataType="BOOL" InitialValue="" Comment="Digital Input DI19 (only for 10DIN models)" Address="F062" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="SteinC" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="DI20" DataType="BOOL" InitialValue="" Comment="Digital Input DI20 (only for 10DIN models)" Address="F063" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdSix" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="F50HZ" DataType="BOOL" InitialValue="" Comment="If power supply is 24Vac and the frequency is 50Hz, this value is TRUE, otherwise FALSE (only for 10DIN models)" Address="F070" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdFiv" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="F60HZ" DataType="BOOL" InitialValue="" Comment="If power supply is 24Vac and the frequency is 60Hz, this value is TRUE, otherwise FALSE (only for 10DIN models)" Address="F071" Modifier="NonRetain" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdFou" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="Ph1Displacement" DataType="DINT" InitialValue="" Comment="Phase displacement for AO05 with PWM; the range is from 0 to 5000 (only for 10DIN models)" Address="F072" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdThr" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="Ph2Displacement" DataType="DINT" InitialValue="" Comment="Phase displacement for AO06 with PWM; the range is from 0 to 5000 (only for 10DIN models)" Address="F073" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdTwo" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="rTemp_Desire" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="tmTest" DataType="TON" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="">
+      <Dimension Lower="1" Upper="10" />
+    </Variable>
+    <Variable Name="RL01" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL01" Address="F080" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdOne" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="RL02" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL02" Address="F081" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="OrdZer" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="RL03" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL03" Address="F082" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="rVolt" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="RL04" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL04" Address="F083" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="rTemp" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="RL05" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL05" Address="F084" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="iVolt" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="RL06" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL06" Address="F085" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL07" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL07" Address="F086" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL08" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL08" Address="F087" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL09" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL09 (only for 10DIN models)" Address="F088" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL10" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL10 (only for 10DIN models)" Address="F089" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL11" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL11 (only for 10DIN models)" Address="F08A" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL12" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL12 (only for 10DIN models)" Address="F08B" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL13" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL13 (only for 10DIN models)" Address="F08C" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL14" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL14 (only for 10DIN models)" Address="F08D" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+    <Variable Name="RL15" DataType="BOOL" InitialValue="" Comment="Digital Output Relay RL15 (only for 10DIN models)" Address="F08E" Modifier="NonRetain" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="SysParameters" />
+  </GlobalVars>
+  <Devices>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENLINE" Index="0" NbChannels="1" IsVirtual="false" Order="1" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" Alias="" Comment="" Address="" IsComplexMember="false" ConvFunctio="" SymbolName="_IO_IX0_0">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="name" Value="SPI" />
+        <Parameter Name="par_1" Value="1" />
+        <Parameter Name="par_2" Value="20" />
+        <Parameter Name="par_3" Value="1" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+        <Parameter Name="num_ai_brd" Value="32" />
+        <Parameter Name="num_ao_brd" Value="32" />
+        <Parameter Name="num_di_brd" Value="32" />
+        <Parameter Name="num_do_brd" Value="32" />
+        <Parameter Name="max_ai_ch" Value="32" />
+        <Parameter Name="max_ao_ch" Value="32" />
+        <Parameter Name="max_di_ch" Value="32" />
+        <Parameter Name="max_do_ch" Value="32" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENDI" Index="1" NbChannels="32" IsVirtual="false" Order="2" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="DI01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="1" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="1" IsComplexMember="false" ConvFunctio="" SymbolName="DI02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="2" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="2" IsComplexMember="false" ConvFunctio="" SymbolName="DI03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="3" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="3" IsComplexMember="false" ConvFunctio="" SymbolName="DI04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="4" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="4" IsComplexMember="false" ConvFunctio="" SymbolName="DI05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="5" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="5" IsComplexMember="false" ConvFunctio="" SymbolName="DI06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="6" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="6" IsComplexMember="false" ConvFunctio="" SymbolName="DI07">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="7" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="7" IsComplexMember="false" ConvFunctio="" SymbolName="DI08">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="8" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="8" IsComplexMember="false" ConvFunctio="" SymbolName="DI09">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="9" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="9" IsComplexMember="false" ConvFunctio="" SymbolName="DI10">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="10" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="10" IsComplexMember="false" ConvFunctio="" SymbolName="DI11">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="11" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="11" IsComplexMember="false" ConvFunctio="" SymbolName="DI12">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="12" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="12" IsComplexMember="false" ConvFunctio="" SymbolName="DI13">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="13" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="13" IsComplexMember="false" ConvFunctio="" SymbolName="DI14">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="14" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="14" IsComplexMember="false" ConvFunctio="" SymbolName="DI15">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="15" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="15" IsComplexMember="false" ConvFunctio="" SymbolName="DI16">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="16" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="16" IsComplexMember="false" ConvFunctio="" SymbolName="DI17">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="17" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="17" IsComplexMember="false" ConvFunctio="" SymbolName="DI18">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="18" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="18" IsComplexMember="false" ConvFunctio="" SymbolName="DI19">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="19" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="19" IsComplexMember="false" ConvFunctio="" SymbolName="DI20">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="20" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="20" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="21" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="21" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="22" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="22" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="23" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="23" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="24" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="24" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="25" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="25" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="26" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="26" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_07">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="27" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="27" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_08">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="28" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="28" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_09">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="29" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="29" IsComplexMember="false" ConvFunctio="" SymbolName="AIasDI_10">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="30" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="30" IsComplexMember="false" ConvFunctio="" SymbolName="F50HZ">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="31" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="31" IsComplexMember="false" ConvFunctio="" SymbolName="F60HZ">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="par_1" Value="" />
+        <Parameter Name="par_2" Value="" />
+        <Parameter Name="par_3" Value="" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENDO" Index="2" NbChannels="15" IsVirtual="false" Order="3" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="RL01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="1" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="1" IsComplexMember="false" ConvFunctio="" SymbolName="RL02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="2" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="2" IsComplexMember="false" ConvFunctio="" SymbolName="RL03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="3" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="3" IsComplexMember="false" ConvFunctio="" SymbolName="RL04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="4" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="4" IsComplexMember="false" ConvFunctio="" SymbolName="RL05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="5" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="5" IsComplexMember="false" ConvFunctio="" SymbolName="RL06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="6" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="6" IsComplexMember="false" ConvFunctio="" SymbolName="RL07">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="7" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="7" IsComplexMember="false" ConvFunctio="" SymbolName="RL08">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="8" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="8" IsComplexMember="false" ConvFunctio="" SymbolName="RL09">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="9" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="9" IsComplexMember="false" ConvFunctio="" SymbolName="RL10">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="10" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="10" IsComplexMember="false" ConvFunctio="" SymbolName="RL11">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="11" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="11" IsComplexMember="false" ConvFunctio="" SymbolName="RL12">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="12" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="12" IsComplexMember="false" ConvFunctio="" SymbolName="RL13">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="13" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="13" IsComplexMember="false" ConvFunctio="" SymbolName="RL14">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="14" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="14" IsComplexMember="false" ConvFunctio="" SymbolName="RL15">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="par_1" Value="0" />
+        <Parameter Name="par_2" Value="0" />
+        <Parameter Name="par_3" Value="" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+        <Parameter Name="hold" Value="0" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENAI" Index="3" NbChannels="10" IsVirtual="false" Order="4" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="0" GainBf="0" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="AI01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="1" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="1" IsComplexMember="false" ConvFunctio="" SymbolName="AI02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="2" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="2" IsComplexMember="false" ConvFunctio="" SymbolName="AI03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="3" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="3" IsComplexMember="false" ConvFunctio="" SymbolName="AI04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="4" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="4" IsComplexMember="false" ConvFunctio="" SymbolName="AI05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="5" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="5" IsComplexMember="false" ConvFunctio="" SymbolName="AI06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="6" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="6" IsComplexMember="false" ConvFunctio="" SymbolName="AI07">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="7" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="7" IsComplexMember="false" ConvFunctio="" SymbolName="AI08">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="8" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="8" IsComplexMember="false" ConvFunctio="" SymbolName="AI09">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="9" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="9" IsComplexMember="false" ConvFunctio="" SymbolName="AI10">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="par_1" Value="0" />
+        <Parameter Name="par_2" Value="0" />
+        <Parameter Name="par_3" Value="" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENAO" Index="4" NbChannels="8" IsVirtual="false" Order="5" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="AO01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="1" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="1" IsComplexMember="false" ConvFunctio="" SymbolName="AO02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="2" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="2" IsComplexMember="false" ConvFunctio="" SymbolName="AO03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="3" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="3" IsComplexMember="false" ConvFunctio="" SymbolName="AO04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="4" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="4" IsComplexMember="false" ConvFunctio="" SymbolName="AO05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="5" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="5" IsComplexMember="false" ConvFunctio="" SymbolName="AO06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="6" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="6" IsComplexMember="false" ConvFunctio="" SymbolName="Ph1Displacement">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="7" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="7" IsComplexMember="false" ConvFunctio="" SymbolName="Ph2Displacement">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="par_1" Value="0" />
+        <Parameter Name="par_2" Value="0" />
+        <Parameter Name="par_3" Value="" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+        <Parameter Name="hold" Value="0" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENAO" Index="5" NbChannels="16" IsVirtual="false" Order="6" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="1" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="1" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="2" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="2" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="3" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="3" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="4" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="4" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="5" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="5" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="6" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="6" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI07">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="7" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="7" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI08">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="8" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="8" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI09">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="9" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="9" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAI10">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="10" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="10" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO01">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="11" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="11" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO02">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="12" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="12" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO03">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="13" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="13" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO04">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="14" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="14" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO05">
+          <ChannelParameterInstances />
+        </IOSymbol>
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="15" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="15" IsComplexMember="false" ConvFunctio="" SymbolName="ConfAO06">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="0" />
+        <Parameter Name="par_1" Value="0" />
+        <Parameter Name="par_2" Value="1" />
+        <Parameter Name="par_3" Value="" />
+        <Parameter Name="par_4" Value="" />
+        <Parameter Name="par_5" Value="" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+        <Parameter Name="hold" Value="0" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENLINE" Index="6" NbChannels="1" IsVirtual="false" Order="7" Alias="" Comment="MODBUS GENLINE">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" Alias="" Comment="" Address="" IsComplexMember="false" ConvFunctio="" SymbolName="_IO_IX6_0">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="1" />
+        <Parameter Name="name" Value="MDB" />
+        <Parameter Name="par_1" Value="1" />
+        <Parameter Name="par_2" Value="500" />
+        <Parameter Name="par_3" Value="3" />
+        <Parameter Name="par_4" Value="/dev/ttyS3" />
+        <Parameter Name="par_5" Value="9600,n,8,1" />
+        <Parameter Name="par_6" Value="20" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+        <Parameter Name="num_ai_brd" Value="32" />
+        <Parameter Name="num_ao_brd" Value="32" />
+        <Parameter Name="num_di_brd" Value="32" />
+        <Parameter Name="num_do_brd" Value="32" />
+        <Parameter Name="max_ai_ch" Value="32" />
+        <Parameter Name="max_ao_ch" Value="32" />
+        <Parameter Name="max_di_ch" Value="32" />
+        <Parameter Name="max_do_ch" Value="32" />
+      </Parameters>
+    </Device>
+    <Device PackageName="DIX_" DriverName="IO_" Name="GENAI" Index="7" NbChannels="1" IsVirtual="false" Order="8" Alias="" Comment="">
+      <IOSymbols AllIOSymbols="true">
+        <IOSymbol GainA="1" GainB="1" Offset="0" Order="0" GainAf="1" GainBf="1" OffsetF="0" PhysicalOrder="0" IsComplexMember="false" ConvFunctio="" SymbolName="IO_ANALOG_INPUT1">
+          <ChannelParameterInstances />
+        </IOSymbol>
+      </IOSymbols>
+      <Parameters>
+        <Parameter Name="line_num" Value="1" />
+        <Parameter Name="par_1" Value="1" />
+        <Parameter Name="par_2" Value="1" />
+        <Parameter Name="par_3" Value="256" />
+        <Parameter Name="par_4" Value="3" />
+        <Parameter Name="par_5" Value="1" />
+        <Parameter Name="par_6" Value="" />
+        <Parameter Name="par_7" Value="" />
+        <Parameter Name="par_8" Value="" />
+      </Parameters>
+    </Device>
+  </Devices>
+  <ExportedGroups />
+  <ImportedGroups />
+  <Groups>
+    <Group Name="SysParameters" SingleTextLine="Internal parameters" Order="2" />
+    <Group Name="ApplicationRelease" SingleTextLine="String to write inside the address F200" Order="1" />
+    <Group Name="Prop_Regulation" SingleTextLine="" Order="3" />
+  </Groups>
+</Resource>

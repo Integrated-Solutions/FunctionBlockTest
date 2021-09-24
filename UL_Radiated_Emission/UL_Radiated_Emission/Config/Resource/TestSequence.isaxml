@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="TestSequence" ElementGuid="eaebf1c8-bc37-4e6f-a062-b90ce983a203" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <Program />
+  <LocalVars>
+    <Variable Name="tempVolt" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+  </LocalVars>
+  <PouBody><![CDATA[PROGRAM TestSequence
+(*UL Radiated Emissions Testing*)
+
+(* This program will energize outputs RL1, RL7, RL10, and RL11 consecutivly based on the Timer (tmrSeq) and then energize all together*)
+
+
+If tmrSeq.Q = false THEN
+	tmrSeq(true, t#20s);
+end_if;
+
+(* Trigger Relay 1*)
+If (tmrseq.et > t#0s) and (tmrSeq.et < t#2s) then
+	RL01 := TRUE;
+ELSE
+	RL01 := FALSE;
+END_IF;
+
+(* Trigger Relay 7*)
+If (tmrseq.et > t#4s) and (tmrSeq.et < t#6s) then
+	RL07 := TRUE;
+ELSE
+	RL07 := FALSE;
+END_IF;
+
+(* Trigger Relay 10*)
+If (tmrseq.et > t#8s) and (tmrSeq.et < t#10s) then
+	RL10 := TRUE;
+ELSE
+	RL10 := FALSE;
+END_IF;
+
+(* Trigger Relay 11*)
+If (tmrseq.et > t#12s) and (tmrSeq.et < t#14s) then
+	RL11 := TRUE;
+ELSE
+	RL11 := FALSE;
+END_IF;
+
+(* Trigger all relays*)
+If (tmrseq.et > t#16s) and (tmrSeq.et < t#18s) then
+	RL01 := TRUE;
+	RL07 := TRUE;
+	RL10 := TRUE;
+	RL11 := TRUE;
+
+END_IF;
+
+If (tmrSeq.et >= t#20s) THEN
+	tmrseq(false, t#0s);
+end_if;
+
+AO01 := ANALOG_VOLTAGE ;
+
+
+
+
+(*ANALOG_VOLTAGE := ((-3*tempdes*tempdes*tempdes) + (900*tempdes*tempdes) + (68000*tempdes) + (2428000))/10000;*)
+(*ANALOG_VOLTAGE := ((-1*tempdes*tempdes*tempdes*tempdes) - (8*tempdes*tempdes*tempdes) + (70000*tempdes*tempdes) + (6500000*tempdes)+(252100000))/1000000;*)
+(*ANALOG_VOLTAGE := ((-1*tempdes*tempdes*tempdes*tempdes*tempdes)-(4000*tempdes*tempdes*tempdes*tempdes)+(200000*tempdes*tempdes*tempdes)+(70000000*tempdes*tempdes)+(6200000000*tempdes)+(254200000000))/100000000;*)
+
+tempF := (((AI07 * 18)/10)+ 3200);
+
+SteinA := 0.001125308852122;
+SteinB := 0.000234711863267;
+SteinC := 0.000000085663516;
+
+OrdSix := -0.00000000000005;
+OrdFiv := 0.00000000005;
+OrdFou := -0.00000001;
+OrdThr := 0.000001;
+OrdTwo := 0.00004;
+OrdOne := 0.0055;
+OrdZer := 0.1819;
+
+rVolt := (OrdSix*rTemp*rTemp*rTemp*rTemp*rTemp*rTemp)+(OrdFiv*rTemp*rTemp*rTemp*rTemp*rTemp)+ (OrdFou*rTemp*rTemp*rTemp*rTemp)+(OrdThr*rTemp*rTemp*rTemp)+(OrdTwo*rTemp*rTemp)+(OrdOne*rTemp)+(OrdZer);
+tempVolt := rVolt * 1000.00;
+iVolt := ANY_TO_DINT(tempVolt);
+
+END_PROGRAM]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>

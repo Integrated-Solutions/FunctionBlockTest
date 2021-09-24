@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="SIMULATE_10K_NTC" ElementGuid="ee008b8b-ea28-45c7-970a-a2d6d4652eab" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <FunctionBlock IdentifierNb="0" Keyword="" InitInstance="false" SymbMonExtraBytes="128" />
+  <LocalVars>
+    <Variable Name="iTemp" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+    <Variable Name="iAnalogOut" DataType="DINT" InitialValue="" Comment="Analog Voltage Ouput" Address="" Modifier="Constant" Kind="VarOutput" Alias="" AccessRights="Write" StringSize="0" Direction="Output" CommentFields="" Attributes="0" />
+  </LocalVars>
+  <PouBody><![CDATA[FUNCTION_BLOCK SIMULATE_10K_NTC
+IF iTemp > 24 and iTemp < 46 THEN
+iAnalogOut := (((-1*iTemp*iTemp*iTemp*iTemp) - (8*iTemp*iTemp*iTemp) + (70000*iTemp*iTemp) + (6500000*iTemp)+(252100000))/1000000)-17;
+ELSIF iTemp > 123 THEN
+iAnalogOut := (((-5*iTemp*iTemp)+(2680*iTemp)-(71970))/100)+(iTemp-90);  
+ELSE
+iAnalogOut := (((-1*iTemp*iTemp*iTemp*iTemp) - (8*iTemp*iTemp*iTemp) + (70000*iTemp*iTemp) + (6500000*iTemp)+(252100000))/1000000)-6;
+END_IF;
+END_FUNCTION_BLOCK]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="P_Reg" ElementGuid="cf9a8e82-7390-48a8-be2a-0ada7710392b" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(User defined)" GenDebugInfo="true" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <FunctionBlock IdentifierNb="0" Keyword="" InitInstance="false" SymbMonExtraBytes="128" />
+  <LocalVars>
+    <Variable Name="Signal_Input" DataType="DINT" InitialValue="" Comment="Analog Input Value (Decimal resolution)" Address="" Modifier="Constant" Kind="VarInput" Alias="INP" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="4096" />
+    <Variable Name="Setpoint" DataType="DINT" InitialValue="" Comment="set point (decimal resolution)" Address="" Modifier="Constant" Kind="VarInput" Alias="SET" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="4096" />
+    <Variable Name="Pid_PB" DataType="DINT" InitialValue="" Comment="Proportional band (decimal resolution)" Address="" Modifier="Constant" Kind="VarInput" Alias="PB" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="4096" />
+    <Variable Name="Pid_Int" DataType="DINT" InitialValue="" Comment="Integral Band (decimal Resolution)" Address="" Modifier="Constant" Kind="VarInput" Alias="" AccessRights="Read" StringSize="0" Direction="Input" CommentFields="" Attributes="0" />
+    <Variable Name="PId_Out" DataType="DINT" InitialValue="" Comment="Control Variable (0 - 100 %)" Address="" Modifier="Constant" Kind="VarOutput" Alias="OUT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="4096" />
+    <Variable Name="Status" DataType="DINT" InitialValue="" Comment="status: 1--&gt; PID in Saturation  0-&gt;PID, else parameters not consistent" Address="" Modifier="Constant" Kind="VarOutput" Alias="STT" AccessRights="ReadWrite" StringSize="0" Direction="Output" CommentFields="" Attributes="4096" />
+    <Variable Name="Pid_DDER" DataType="TON" InitialValue="" Comment="Derivative Time (seconds)" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="Pid_DER" DataType="TON" InitialValue="" Comment="Derivative Sample Time (seconds)" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="Pid_INC" DataType="TON" InitialValue="" Comment="Error Holding" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="Pid_Out_temp" DataType="DINT" InitialValue="" Comment="temporary Control Variable(%)" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="P" DataType="DINT" InitialValue="" Comment="Proportional part of the PID" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="E" DataType="DINT" InitialValue="" Comment="error value" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="Init" DataType="BOOL" InitialValue="" Comment="Boolean variable to inizialize the PID" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="Prev_PB" DataType="DINT" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="Real_PB" DataType="REAL" InitialValue="" Comment="" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="4096" />
+    <Variable Name="I" DataType="DINT" InitialValue="" Comment="Integral part of PID" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+    <Variable Name="E_Prev" DataType="DINT" InitialValue="" Comment="Error Holding" Address="" Modifier="Constant" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" Direction="Local" CommentFields="" Attributes="0" />
+  </LocalVars>
+  <PouBody><![CDATA[FUNCTION_BLOCK P_Reg
+(*
+ * PID regulator
+ *
+ * @param Signal_Input: analog input
+ * @param Setpoint: set point
+ * @param Pid_PB: proportional band
+ * @param Pid_RS: band offset
+ * @return PId_Out: output in range 0-100
+ * @return STT: status: 0->ok, else parameters not consistent
+ *)
+
+
+	Status := 0;
+
+	IF (Pid_PB = 0) THEN 
+		Status := -1;
+	END_IF; 
+
+	IF (Status <0) THEN 
+		Pid_Out := 0;
+		RETURN;
+	END_IF; 
+
+	IF (Init = FALSE)  THEN 
+		(* Initialization *)
+		P := 0;
+		Status := 0;
+		Init := TRUE;
+		E_Prev:=0;
+	END_IF; 
+
+	IF (Prev_PB <> Pid_PB) THEN 
+		Real_PB := ANY_TO_REAL(Pid_PB);
+		Prev_PB := Pid_PB;
+	END_IF; 
+	
+	
+	(* Update the error *)
+	E := Signal_Input - Setpoint;
+
+	(* Update the proportional part = Error / Proportional Band *)
+	P := E / Pid_PB;
+
+    (*Update integral every second*)
+	Pid_INC(true,t#1s);
+		
+	if Pid_INC.Q = true THEN
+		Pid_INC(FALSE,t#1s);	
+	
+		I:=(E_Prev+E)/(Pid_PB*Pid_Int);
+		
+	END_IF;
+	
+    	E_Prev:=E;
+
+	(* Update the Control Variable *)
+	Pid_Out_temp := 100*( P + I);
+
+	(*Update the Control Variable *)
+	Pid_Out := Pid_Out_temp;
+	IF (Pid_Out > 100) THEN 
+		Pid_Out := 100;
+	ELSIF (Pid_Out < 0) THEN 
+		Pid_Out := 0;
+	END_IF; 
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END_FUNCTION_BLOCK]]></PouBody>
+  <PouUIProperties>
+    <Root Version="7">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>
