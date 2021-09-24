@@ -1,6 +1,6 @@
 PROGRAM Prog2
 #info= FBD
-@@NBID=10
+@@NBID=12
 @BOX:1,P=(240,204),S=(96,60),C=(1,1),X=steinhart_1
 T=steinhart
 @BOX:3,P=(352,204),S=(128,60),C=(1,1),X=k_to_f_1
@@ -11,11 +11,14 @@ T=Temp2Volt
 T=SIMULATE_10K_NTC
 @BOX:17,P=(384,600),S=(128,300),C=(1,11),X=GET_LOCALTIME_1
 T=GET_LOCALTIME
+@BOX:19,P=(688,576),S=(128,300),C=(1,11),X=GET_LOCALTIME_2
+T=GET_LOCALTIME
 @VAR:2,P=(144,228),S=(80,24),C=(1,1),X=rResistance
 @VAR:7,P=(128,324),S=(96,24),C=(1,1),X=rTemp_Desire
 @VAR:10,P=(128,408),S=(64,24),C=(1,1),X=TEMPDES
 @VAR:11,P=(384,408),S=(128,24),C=(1,1),X=ANALOG_VOLTAGE
 @VAR:18,P=(304,624),S=(64,24),C=(1,1),X=True
+@VAR:20,P=(608,600),S=(64,24),C=(1,1),X=True
 @ARC:D=0,Z=(0,0),F=(2,0),T=(1,0)
 P=(224.240;224.240;224.240;240.240)
 @ARC:D=0,Z=(0,0),F=(1,0),T=(3,0)
@@ -28,6 +31,8 @@ P=(192.420;192.420;208.420;224.420)
 P=(368.420;368.420;368.420;384.420)
 @ARC:D=0,Z=(0,0),F=(18,0),T=(17,0)
 P=(368.636;368.636;368.636;384.636)
+@ARC:D=0,Z=(0,0),F=(20,0),T=(19,0)
+P=(672.612;672.612;672.612;688.612)
 #end_info
 #info= OTHER
 Version=I:2
@@ -35,6 +40,6 @@ Scaling=PI(1,1)
 CellSize=PI(16,12)
 #end_info
 #info= ID_MAX
-NextId=18
+NextId=20
 #end_info
 END_PROGRAM

@@ -8,10 +8,11 @@
     <Variable Name="Temp2Volt_1" DataType="Temp2Volt" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
     <Variable Name="SIMULATE_10K_NTC_1" DataType="SIMULATE_10K_NTC" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
     <Variable Name="GET_LOCALTIME_1" DataType="GET_LOCALTIME" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="GET_LOCALTIME_2" DataType="GET_LOCALTIME" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
   </LocalVars>
   <PouBody><![CDATA[PROGRAM Prog2
 #info= FBD
-@@NBID=10
+@@NBID=12
 @BOX:1,P=(240,204),S=(96,60),C=(1,1),X=steinhart_1
 T=steinhart
 @BOX:3,P=(352,204),S=(128,60),C=(1,1),X=k_to_f_1
@@ -22,11 +23,14 @@ T=Temp2Volt
 T=SIMULATE_10K_NTC
 @BOX:17,P=(384,600),S=(128,300),C=(1,11),X=GET_LOCALTIME_1
 T=GET_LOCALTIME
+@BOX:19,P=(688,576),S=(128,300),C=(1,11),X=GET_LOCALTIME_2
+T=GET_LOCALTIME
 @VAR:2,P=(144,228),S=(80,24),C=(1,1),X=rResistance
 @VAR:7,P=(128,324),S=(96,24),C=(1,1),X=rTemp_Desire
 @VAR:10,P=(128,408),S=(64,24),C=(1,1),X=TEMPDES
 @VAR:11,P=(384,408),S=(128,24),C=(1,1),X=ANALOG_VOLTAGE
 @VAR:18,P=(304,624),S=(64,24),C=(1,1),X=True
+@VAR:20,P=(608,600),S=(64,24),C=(1,1),X=True
 @ARC:D=0,Z=(0,0),F=(2,0),T=(1,0)
 P=(224.240;224.240;224.240;240.240)
 @ARC:D=0,Z=(0,0),F=(1,0),T=(3,0)
@@ -39,6 +43,8 @@ P=(192.420;192.420;208.420;224.420)
 P=(368.420;368.420;368.420;384.420)
 @ARC:D=0,Z=(0,0),F=(18,0),T=(17,0)
 P=(368.636;368.636;368.636;384.636)
+@ARC:D=0,Z=(0,0),F=(20,0),T=(19,0)
+P=(672.612;672.612;672.612;688.612)
 #end_info
 #info= OTHER
 Version=I:2
@@ -46,7 +52,7 @@ Scaling=PI(1,1)
 CellSize=PI(16,12)
 #end_info
 #info= ID_MAX
-NextId=18
+NextId=20
 #end_info
 END_PROGRAM]]></PouBody>
   <PouUIProperties>
@@ -54,16 +60,19 @@ END_PROGRAM]]></PouBody>
   <LanguageContainerStyle ContainerDisplayGrid="true" Comment.BackgroundColor="LightGreen" LeftPowerRail.BackgroundColor="DimGray" LeftPowerRail.GradientColor="DimGray" Link.PenColor="Black" Link.IsArrow="false" Link.LineStyle="Solid" Link.LineType="Normal" LinkEvent.PenColor="DimGray" LinkEvent.IsArrow="false" LinkEvent.LineStyle="Solid" LinkEvent.LineType="Normal" PouCall.DispayInstanceName="true" PouCall.BackgroundColor="#FFA0B8EA" PouCall.GradientColor="#FF034EA2" PouCall.Alpha="255" PouCallOperator.DispayInstanceName="true" PouCallOperator.BackgroundColor="White" PouCallOperator.GradientColor="#FF7B87C2" PouCallOperator.Alpha="255" Region.HeaderColor="LightGrey" Region.BackgroundColor="LightGreen" Region.Alpha="32" Region.HeaderAlpha="255" RightPowerRail.BackgroundColor="DimGray" RightPowerRail.GradientColor="DimGray" Variable.BackgroundColor="SteelBlue" Variable.GradientColor="LightSteelBlue" Variable.Alpha="255" Variable.DisplayMode="NameAndAlias" Variable.CommentPosition="None" VariableConstant.BackgroundColor="LightGrey" VariableConstant.GradientColor="LightGrey" VariableConstant.Alpha="255" VariableConstant.DisplayMode="NameAndAlias" VariableConstant.CommentPosition="None" AutoInput="true" Index="0">
     <Connection From="steinhart_1.rKelvin" To="k_to_f_1.rKelvin" Points="336,240 336,240 336,240 352,240" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(1,0)(3,0)" />
     <Connection From="TEMPDES" To="SIMULATE_10K_NTC_1.iTemp" Points="192,420 192,420 208,420 224,420" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(10,0)(9,0)" />
-    <Connection From="True" To="GET_LOCALTIME_1.ENABLE" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Points="368,636 368,636 368,636 384,636" Key="(18,0)(17,0)" />
+    <Connection From="True" To="GET_LOCALTIME_1.ENABLE" Points="368,636 368,636 368,636 384,636" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(18,0)(17,0)" />
     <Connection From="" To="steinhart_1.rR" Points="224,240 224,240 224,240 240,240" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(2,0)(1,0)" />
+    <Connection From="True" To="GET_LOCALTIME_1.ENABLE" Points="672,612 672,612 672,612 688,612" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(20,0)(19,0)" />
     <Connection From="rTemp_Desire" To="Temp2Volt_1.rTemp_F" Points="224,336 224,336 224,336 240,336" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(7,0)(6,0)" />
     <Connection From="SIMULATE_10K_NTC_1.iAnalogOut" To="ANALOG_VOLTAGE" Points="368,420 368,420 368,420 384,420" PenColor="Black" IsArrow="false" LineStyle="Solid" LineType="Normal" Key="(9,0)(11,0)" />
     <PouCall Top="204" Left="240" Width="96" Height="60" DataType="steinhart" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="steinhart_1" Key="1" />
     <Variable Top="408" Left="128" Width="64" Name="TEMPDES" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="DINT" Key="10" />
     <Variable Top="408" Left="384" Width="128" Name="ANALOG_VOLTAGE" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="DINT" Key="11" />
-    <PouCall Name="GET_LOCALTIME_1" DataType="GET_LOCALTIME" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Width="128" Height="300" Left="384" Top="600" Key="17" />
-    <Variable BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" Width="64" Height="24" DataType="" Left="304" Top="624" Name="True" Key="18" />
+    <PouCall Top="600" Left="384" Width="128" Height="300" Name="GET_LOCALTIME_1" DataType="GET_LOCALTIME" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Key="17" />
+    <Variable Top="624" Left="304" Width="64" Name="True" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="" Key="18" />
+    <PouCall Top="576" Left="688" Width="128" Height="300" Name="GET_LOCALTIME_2" DataType="GET_LOCALTIME" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Key="19" />
     <Variable Top="228" Left="144" Width="80" Name="rResistance" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="REAL" Key="2" />
+    <Variable Top="600" Left="608" Width="64" Name="True" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="" Key="20" />
     <PouCall Top="204" Left="352" Width="128" Height="60" DataType="k_to_f" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="k_to_f_1" Key="3" />
     <PouCall Top="300" Left="240" Width="112" Height="60" DataType="Temp2Volt" DispayInstanceName="true" BackgroundColor="#FFA0B8EA" GradientColor="#FF034EA2" Alpha="255" Name="Temp2Volt_1" Key="6" />
     <Variable Top="324" Left="128" Width="96" Name="rTemp_Desire" Height="24" BackgroundColor="SteelBlue" GradientColor="LightSteelBlue" Alpha="255" DisplayMode="NameAndAlias" CommentPosition="None" DataType="REAL" Key="7" />
