@@ -40,7 +40,7 @@ Scaling=PI(1,1)
 CellSize=PI(16,12)
 #end_info
 #info= ID_MAX
-NextId=11
+NextId=15
 #end_info
 END_PROGRAM]]></PouBody>
   <PouUIProperties>
